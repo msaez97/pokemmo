@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki | PokeMMO | Español | No Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="js/script.js" as="script" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+			<div class="header-top">
+				<img class="logo-header" src="https://forums.pokemmo.com/uploads/monthly_2023_09/pokemmo.png.7611d45714c61b1ddcb944309602a3fa.png.699eaa4db60ba6bea79ccb1c1be2d43f.png" alt="Logo Wiki PokeMMO" width="200" height="50">
+				<div class="buscador">
+					<input class="input-buscador" type="text" placeholder="Buscar pokemon por nombre o numero de pokedex..">
+					<input onclick="buscarPokemon()" type="button" value="Buscar">
+				</div>
+			</div>
+			<div class="header-bottom">
+				<nav class="navegacion">
+					<a href="/">Inicio</a>
+					<a href="pokedex/index.php">Pokedex</a>
+				</nav>
+			</div>
+		</div>
+    </header>
+    <div class="listaPokemon"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
