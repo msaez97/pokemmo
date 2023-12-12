@@ -125,7 +125,7 @@ async function comprobarTipos(poketypes, nombre) {
 
 function buscarPokemon() {
 
-    let buscador = document.querySelector(".input-buscador").value;
+    let buscador = document.querySelector(".input-buscador").value.toLowerCase();
 
     if (buscador == "") {
 
