@@ -1,6 +1,7 @@
 const urlApi = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 const urlApiPokemon = "https://pokeapi.co/api/v2/pokemon/";
 let detenerEjecucion = false;
+let estaEjecutandose = false;
 
 fetch(urlApi)
 .then(response => response.json())
@@ -18,6 +19,8 @@ async function mostrarPokemon(listaPokemon) {
                 break;
             }
 
+            estaEjecutandose = true;
+
             cartaPokemon(poke.name, poke.height, poke.weight, contenedorPokemon, poke.sprites.other.dream_world.front_default, poke.id);
             comprobarTipos(poke.types, poke.name);
 
@@ -27,6 +30,9 @@ async function mostrarPokemon(listaPokemon) {
         }
 
     }
+
+    estaEjecutandose = false;
+
 }
 
 async function cartaPokemon(nombre, altura, peso, contenedorPokemon, imagen, id_pokedex) {
@@ -126,7 +132,15 @@ function buscarPokemon() {
         const contenedorPokemon = document.querySelector(".listaPokemon");
         contenedorPokemon.innerHTML = "";
 
-        detenerEjecucion = false;
+        if (estaEjecutandose) {
+
+            detenerEjecucion = true;
+
+        } else {
+
+            detenerEjecucion = false;
+
+        }
 
         fetch(urlApi)
         .then(response => response.json())
@@ -153,3 +167,52 @@ function buscarPokemon() {
     }
 
 }
+
+// Lista de opciones
+var opciones = ["Bulbasaur", "Ivysaur", "Opción 3", "Opción 4", "Otra Opción"];
+
+// Función para mostrar las sugerencias
+function mostrarSugerencias() {
+    var input = document.querySelector(".input-buscador");
+    var sugerenciasContainer = document.getElementById("sugerenciasContainer");
+
+    // Limpiar sugerencias previas
+    sugerenciasContainer.innerHTML = "";
+
+    // Obtener el valor del input
+    var filtro = input.value.toLowerCase();
+
+    // Filtrar opciones que coincidan con el input
+    var sugerencias = opciones.filter(function(opcion) {
+        return opcion.toLowerCase().includes(filtro);
+    });
+
+    // Mostrar sugerencias
+    sugerencias.forEach(function(sugerencia) {
+        var divSugerencia = document.createElement("div");
+        divSugerencia.innerHTML = sugerencia;
+
+        // Asignar evento al hacer clic en la sugerencia
+        divSugerencia.addEventListener("click", function() {
+            input.value = sugerencia;
+            sugerenciasContainer.style.display = "none";
+        });
+
+        sugerenciasContainer.appendChild(divSugerencia);
+    });
+
+    // Mostrar el contenedor de sugerencias si hay coincidencias
+    if (sugerencias.length > 0) {
+        sugerenciasContainer.style.display = "block";
+    } else {
+        sugerenciasContainer.style.display = "none";
+    }
+}
+
+// Cerrar las sugerencias al hacer clic en cualquier parte del documento
+document.addEventListener("click", function(event) {
+    var sugerenciasContainer = document.getElementById("sugerenciasContainer");
+    if (event.target !== sugerenciasContainer && !sugerenciasContainer.contains(event.target)) {
+        sugerenciasContainer.style.display = "none";
+    }
+});

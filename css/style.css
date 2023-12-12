@@ -97,12 +97,33 @@ body {
 }
 .buscador {
     padding-top: 1rem;
+	position: relative;
 }
 .input-buscador {
 	padding: 1rem;
 	border-radius: 1rem;
 	border: 2px solid var(--negro);
 	color: var(--negro);
+}
+/* Estilos para el contenedor de sugerencias */
+.sugerencias {
+	position: absolute;
+	background-color: var(--blanco);
+	display: none;
+	border: 1px solid #ccc;
+	max-height: 150px;
+	overflow-y: auto;
+	width: 100%;
+	box-sizing: border-box;
+	top: 100%;
+	left: 0;
+}
+.sugerencias div {
+	padding: 1rem;
+	cursor: pointer;
+}
+.sugerencias div:hover {
+	background-color: #f2f2f2;
 }
 /* POKEDEX */
 .listaPokemon {
