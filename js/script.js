@@ -1,4 +1,4 @@
-const urlApi = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
+const urlApi = "https://pokeapi.co/api/v2/pokemon?limit=24&offset=0";
 const urlApiPokemon = "https://pokeapi.co/api/v2/pokemon/";
 let detenerEjecucion = false;
 let estaEjecutandose = false;
@@ -38,18 +38,20 @@ async function mostrarPokemon(listaPokemon) {
 async function cartaPokemon(nombre, altura, peso, contenedorPokemon, imagen, id_pokedex) {
 
     contenedorPokemon.innerHTML += `
-        <div class="pokemon ${nombre}">
-            <img src="${imagen}" alt="imagen de ${nombre}" width="150" height="150" loading="lazy">
-            <div class="id_nombre">
-                <p class="id_pokedex">#${id_pokedex}</p>
-                <p class="nombre_pokedex">${nombre}</p>
+        <a href="pokemon.html?id=${id_pokedex}">
+            <div class="pokemon ${nombre}">
+                <img src="${imagen}" alt="imagen de ${nombre}" width="150" height="150" loading="lazy">
+                <div class="id_nombre">
+                    <p class="id_pokedex">#${id_pokedex}</p>
+                    <p class="nombre_pokedex">${nombre}</p>
+                </div>
+                <div class="${nombre}_tipos tipos"></div>
+                <div class="medidas">
+                    <p class="peso">${peso / 10} kg</p>
+                    <p class="altura">${altura / 10} m</p>
+                </div>
             </div>
-            <div class="${nombre}_tipos tipos"></div>
-            <div class="medidas">
-                <p class="peso">${peso / 10} kg</p>
-                <p class="altura">${altura / 10} m</p>
-            </div>
-        </div>
+        </a>
         `;
 
 }
