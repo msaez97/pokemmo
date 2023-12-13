@@ -317,17 +317,15 @@ async function comprobarTipos(poketypes, nombre) {
         });
 
 let busquedaActiva = false;
-let tipoActual = null;
 
 async function buscarTipo(tipo) {
-    // Si ya hay una búsqueda en curso y se hace clic nuevamente, detén la búsqueda actual
     if (busquedaActiva) {
+        // Si la búsqueda está en curso, detén la búsqueda actual
         busquedaActiva = false;
         return;
     }
 
     busquedaActiva = true;
-    tipoActual = tipo;
 
     const contenedorPokemon = document.querySelector("#pokemonList");
     contenedorPokemon.innerHTML = "";
@@ -368,18 +366,7 @@ async function buscarTipo(tipo) {
 const filtro = document.querySelector(".btn-filtros"); // Reemplaza "tuFiltro" con el ID real de tu filtro
 
 filtro.addEventListener("click", () => {
-    // Si hay una búsqueda en curso, detén la búsqueda
-    if (busquedaActiva) {
-        busquedaActiva = false;
-    } else {
-        // Si no hay una búsqueda en curso, inicia la búsqueda con el tipo actual
-        buscarTipo(tipoActual);
-    }
-});
-// Ejemplo de cómo puedes iniciar la búsqueda con un nuevo tipo después de detenerla
-document.querySelector("#nuevoTipoBtn").addEventListener("click", () => {
-    // Puedes cambiar "nuevoTipo" con el valor del nuevo tipo que deseas buscar
-    buscarTipo("nuevoTipo");
+    busquedaActiva = false;
 });
 
 
