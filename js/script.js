@@ -344,9 +344,5 @@ async function buscarTipo(tipo) {
 var filtroDiv = document.getElementById('filtroDiv');
 
 function mostrarFiltros() {
-    if (filtroDiv.style.display === 'none' || filtroDiv.style.display === '') {
-        filtroDiv.style.display = 'block';
-    } else {
-        filtroDiv.style.display = 'none';
-    }
+    filtroDiv.classList.toggle('mostrar');
 }
