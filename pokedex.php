@@ -19,6 +19,10 @@
 		<div class="contenedor-mostrar-todo">
 			<button class="padding-all upper negro mostrartodo" onclick="location.reload()">Mostrar Todo</button>
 		</div>
+		<div class="tiposfiltro">
+			<button class="padding-all upper negro planta">Planta</button>
+			<button class="padding-all upper negro fuego">Fuego</button>
+		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
 	</main>

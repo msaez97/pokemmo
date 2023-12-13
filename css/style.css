@@ -21,21 +21,17 @@ a {
 }
 ::-webkit-scrollbar {
 	width: 6px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
 	background-color: var(--negro);
 	border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-track {
 	background-color: #f1f1f1;
-  }
-  
+}
   ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--negro);
-  }
-  
+}
 
 /* REUTILIZABLES */
 .Planta, .Fuego, .Veneno,
