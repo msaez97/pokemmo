@@ -367,7 +367,7 @@ async function buscarTipo(tipo) {
 const filtro = document.querySelector(".btn-filtros"); // Reemplaza "tuFiltro" con el ID real de tu filtro
 
 filtro.addEventListener("click", () => {
-    busquedaActiva = false;
+    busquedaActiva = true;
 });
 
 
