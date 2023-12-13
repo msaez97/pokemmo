@@ -225,7 +225,7 @@ async function comprobarTipos(poketypes, nombre) {
 
             // Agregar un pequeño margen para evitar cargar de golpe
             if (
-                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 500) &&
+                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 1000) &&
                 ((paginaActual * elementosPorPagina) < totalPokemon)
             ) {
                 cargando = true; // Establecer la variable de cargando
