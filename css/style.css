@@ -190,6 +190,11 @@ a {
 }
 .mostrartodo:hover {
 	background-color: var(--negro);
+}
+.mostrartodo a {
+	color: var(--negro);
+}
+.mostrartodo a:hover {
 	color: var(--blanco);
 }
 /* Estilos para el contenedor de sugerencias */
