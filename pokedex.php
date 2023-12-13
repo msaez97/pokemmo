@@ -64,6 +64,7 @@
 		<p class="padding-no-bottom">Hemos implementado una función de búsqueda avanzada que permite a los entrenadores encontrar Pokémon según criterios específicos, como tipo, hábitat o incluso la región de origen. Esta herramienta facilita la planificación estratégica para la captura y entrenamiento de Pokémon, ofreciendo a los jugadores la capacidad de tomar decisiones informadas sobre la construcción de su equipo.</p>
 		<p class="padding-no-bottom">En resumen, la sección de la Pokédex en nuestra wiki no oficial de PokeMMO es mucho más que una simple enciclopedia; es una herramienta interactiva y en constante evolución que enriquecerá tu experiencia como entrenador en este emocionante mundo virtual. ¡Explora, descubre y sumérgete en el fascinante universo de los Pokémon en PokeMMO!</p>
 		<p class="padding-no-bottom">Puedes visitar la pagina oficial del juego desde <a class="rojo" href="https://pokemmo.com/es/" targer="_blank">aquí</a>.</p>
+		<br>
 	</main>
     <script src="js/script.js"></script>
 </body>
