@@ -341,9 +341,10 @@ async function buscarTipo(tipo) {
 
 }
 
+var filtroDiv = document.getElementById('filtroDiv');
+
 function mostrarFiltros() {
-    var filtroDiv = document.getElementById('filtroDiv');
-    if (filtroDiv.style.display === 'none') {
+    if (filtroDiv.style.display === 'none' || filtroDiv.style.display === '') {
         filtroDiv.style.display = 'block';
     } else {
         filtroDiv.style.display = 'none';
