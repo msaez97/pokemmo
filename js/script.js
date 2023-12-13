@@ -7,6 +7,9 @@ let paginaActual = 1;
         async function cargarPagina(pagina) {
             const offset = (pagina - 1) * elementosPorPagina;
             const url = `${urlBase}?limit=${elementosPorPagina}&offset=${offset}`;
+            
+            // Mostrar el indicador de carga
+            document.getElementById('loadingIndicator').style.display = 'block';
 
             try {
                 const response = await fetch(url);
@@ -14,6 +17,9 @@ let paginaActual = 1;
                 await cargarSprites(data.results);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
+            } finally {
+                // Ocultar el indicador de carga después de completar la carga
+                document.getElementById('loadingIndicator').style.display = 'none';
             }
         }
 
@@ -58,7 +64,7 @@ let paginaActual = 1;
         async function comprobarTipos(poketypes, nombre) {
             const contenedorPokemonInd = document.querySelector(`.${nombre}_tipos`);
             contenedorPokemonInd.innerHTML = "";
-            
+
             for (const tipos of poketypes) {
                 switch (tipos.type.name) {
                     case "grass":

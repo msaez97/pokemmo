@@ -81,6 +81,12 @@ body {
 .Siniestro {
 	background-color: #7A5848;
 }
+#loadingIndicator {
+	display: none;
+	text-align: center;
+	margin: 10px;
+	font-size: 18px;
+}
 
 /* HEADER */
 .header-container {
