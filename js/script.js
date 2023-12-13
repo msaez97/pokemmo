@@ -131,17 +131,17 @@ async function comprobarTipos(poketypes, nombre) {
         if (nombre == "clefable") {
             tipos.type.name = "Normal";
         }
-        if (nombre == "mr-mime" && tipos.type.name == "fairy") {
-            tipos.type.name = "";
+        if (nombre == "mr-mime") {
+            tipos.type.name = "Psíquico";
         }
-        if (nombre == "gardevoir" && tipos.type.name == "fairy") {
-            tipos.type.name = "";
+        if (nombre == "gardevoir") {
+            tipos.type.name = "Psíquico";
         }
-        if (nombre == "marill"  && tipos.type.name == "fairy") {
-            tipos.type.name = "";
+        if (nombre == "marill") {
+            tipos.type.name = "Agua";
         }
-        if (nombre == "azumarill" && tipos.type.name == "fairy") {
-            tipos.type.name = "";
+        if (nombre == "azumarill") {
+            tipos.type.name = "Agua";
         }
         contenedorPokemonInd.innerHTML += `
             <p class="${tipos.type.name}">${tipos.type.name}</p>
