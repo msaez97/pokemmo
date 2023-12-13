@@ -7,6 +7,7 @@ $pokemonName = $_GET["name"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo ucfirst($pokemonName); ?> | Wiki | PokeMMO | Español | No Oficial</title>
+    <link rel="icon" type="image/vnd.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>

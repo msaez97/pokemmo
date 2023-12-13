@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki | Pokedex | PokeMMO | Español | No Oficial</title>
+	<link rel="icon" type="image/vnd.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="js/script.js" as="script" />
 </head>
