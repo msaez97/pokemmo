@@ -212,6 +212,11 @@ a {
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
 }
+@media (min-width: 950px) {
+	.tiposfiltro {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
 .tiposfiltro button {
 	border: 2px solid var(--negro);
 }
