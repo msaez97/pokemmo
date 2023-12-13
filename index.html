@@ -15,7 +15,7 @@
 				<div class="buscador">
 					<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre o numero de pokedex..">
 					<div class="sugerencias" id="sugerenciasContainer"></div>
-					<input onclick="buscarPokemon()" type="button" value="Buscar">
+					<button onclick="buscarPokemon()">Buscar</button>
 				</div>
 			</div>
 			<div class="header-bottom">
@@ -26,7 +26,9 @@
 			</div>
 		</div>
     </header>
-    <div class="listaPokemon"></div>
+    <div id="pokemonList"></div>
+    <button onclick="cargarPaginaAnterior()">Página Anterior</button>
+    <button onclick="cargarPaginaSiguiente()">Página Siguiente</button>
     <script src="js/script.js"></script>
 </body>
 </html>

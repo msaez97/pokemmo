@@ -1,4 +1,36 @@
-let paginaActual = 1;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI Infinite Scroll</title>
+    <style>
+        #sugerenciasContainer {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        #sugerenciasContainer div {
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="input-buscador" oninput="mostrarSugerencias()">
+    <button onclick="buscarPokemon()">Buscar</button>
+    <div id="sugerenciasContainer"></div>
+    <div id="pokemonList"></div>
+    <button onclick="cargarPaginaAnterior()">Página Anterior</button>
+    <button onclick="cargarPaginaSiguiente()">Página Siguiente</button>
+
+    <script>
+        let paginaActual = 1;
         const elementosPorPagina = 24;
         const totalPokemon = 648;
         const urlBase = 'https://pokeapi.co/api/v2/pokemon';
@@ -57,8 +89,6 @@ let paginaActual = 1;
 
         async function comprobarTipos(poketypes, nombre) {
             const contenedorPokemonInd = document.querySelector(`.${nombre}_tipos`);
-            contenedorPokemonInd.innerHTML = "";
-            
             for (const tipos of poketypes) {
                 switch (tipos.type.name) {
                     case "grass":
@@ -159,7 +189,7 @@ let paginaActual = 1;
 
         async function buscarPokemon() {
             const buscador = document.querySelector(".input-buscador").value.toLowerCase();
-        
+
             if (buscador === "") {
                 // Si el buscador está vacío, cargar la primera página
                 paginaActual = 1;
@@ -177,7 +207,7 @@ let paginaActual = 1;
                     console.error('Error al buscar el Pokémon:', error);
                 }
             }
-        }        
+        }
 
         // Mostrar las sugerencias al escribir en el input
         function mostrarSugerencias() {
@@ -219,3 +249,6 @@ let paginaActual = 1;
                 sugerenciasContainer.style.display = "none";
             }
         });
+    </script>
+</body>
+</html>
