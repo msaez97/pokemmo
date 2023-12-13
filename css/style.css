@@ -181,20 +181,14 @@ a {
 	color: var(--blanco);
 }
 .contenedor-mostrar-todo {
-	padding: 0 1rem;
+	padding: 1rem;
 }
 .mostrartodo {
 	border: 2px solid var(--negro);
 	border-radius: 1rem;
-	width: 100%;
 }
 .mostrartodo:hover {
 	background-color: var(--negro);
-}
-.mostrartodo a {
-	color: var(--negro);
-}
-.mostrartodo a:hover {
 	color: var(--blanco);
 }
 /* Estilos para el contenedor de sugerencias */
