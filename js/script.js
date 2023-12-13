@@ -352,7 +352,7 @@ async function buscarTipo(tipo) {
 }
         
 // Lógica para interrumpir la búsqueda al hacer clic en el filtro nuevamente
-const filtro = document.querySelector("#tuFiltro"); // Reemplaza "tuFiltro" con el ID real de tu filtro
+const filtro = document.querySelector(".btn-filtros"); // Reemplaza "tuFiltro" con el ID real de tu filtro
         
 filtro.addEventListener("click", () => {
     interrumpirBusqueda = true;
