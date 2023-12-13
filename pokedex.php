@@ -3,31 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki | PokeMMO | Español | No Oficial</title>
+    <title>Wiki | Pokedex | PokeMMO | Español | No Oficial</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="js/script.js" as="script" />
 </head>
 <body>
-    <header>
-        <div class="header-container">
-			<div class="header-top">
-				<img class="logo-header" src="https://forums.pokemmo.com/uploads/monthly_2023_09/pokemmo.png.7611d45714c61b1ddcb944309602a3fa.png.699eaa4db60ba6bea79ccb1c1be2d43f.png" alt="Logo Wiki PokeMMO" width="200" height="50">
-			</div>
-			<div class="header-bottom">
-				<nav class="navegacion">
-					<a href="/">Inicio</a>
-					<a href="pokedex/index.php">Pokedex</a>
-				</nav>
-			</div>
-		</div>
-    </header>
+	<?php require 'assets/header.php'; ?>
 	<main class="contenedor">
 		<div class="buscador">
 			<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre..">
 			<div class="sugerencias" id="sugerenciasContainer"></div>
 			<button onclick="buscarPokemon()">Buscar</button>
 		</div>
-		<a class="padding-all upper negro mostrartodo" href="/">Mostrar Todo</a>
+		<a class="padding-all upper negro mostrartodo" href="/pokedex.html">Mostrar Todo</a>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
 	</main>
