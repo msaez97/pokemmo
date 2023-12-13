@@ -45,8 +45,11 @@
 		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
+		<h2 class="padding-no-bottom">Herramienta esencial para todo entrenador pokemon</h2>
 		<p class="padding-no-bottom">La sección de la Pokédex en nuestra wiki no oficial de PokeMMO es una herramienta esencial para los entrenadores que buscan información detallada sobre todas las especies de Pokémon disponibles en el juego. Aquí, encontrarás entradas completas que incluyen datos clave, como estadísticas base, movimientos aprendidos, ubicaciones de captura y evoluciones.</p>
+		<h2 class="padding-no-bottom">Información sobre todos los pokemon de PokeMMO en Español</h2>
 		<p class="padding-no-bottom">Cada página de la Pokédex está diseñada de manera intuitiva, permitiendo una fácil navegación para que los usuarios encuentren rápidamente la información que están buscando. Las imágenes vibrantes y las descripciones detalladas brindan una visión completa de la apariencia y características de cada Pokémon, mientras que las secciones interactivas facilitan la búsqueda de datos específicos.</p>
+		<h2 class="padding-no-bottom">¡Estrategias de pokemon en nuestra wiki de PokeMMO!</h2>
 		<p class="padding-no-bottom">Además de la información básica de la Pokédex, nuestra wiki también destaca estrategias recomendadas para entrenadores que buscan maximizar el potencial de sus Pokémon en combate. Desde sugerencias de movimientos hasta tácticas de equipo, nuestra Pokédex no oficial es una guía completa que acompaña a los jugadores en su viaje para convertirse en los mejores entrenadores de PokeMMO. ¡Explora las páginas de la Pokédex y descubre el conocimiento necesario para construir un equipo imparable!</p>
 	</main>
     <script src="js/script.js"></script>
