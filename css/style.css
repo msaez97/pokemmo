@@ -75,6 +75,7 @@ a {
 }
 .Lucha {
 	background-color: #A05038;
+	color: var(--blanco);
 }
 .Psíquico {
 	background-color: #F870A0;
@@ -90,12 +91,14 @@ a {
 }
 .Fantasma {
 	background-color: #6060B0;
+	color: var(--blanco);
 }
 .Dragón {
 	background-color: #7860E0;
 }
 .Siniestro {
 	background-color: #7A5848;
+	color: var(--blanco);
 }
 #loadingIndicator {
 	display: none;
