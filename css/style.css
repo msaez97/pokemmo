@@ -130,8 +130,9 @@ a {
 @media (min-width: 950px) {
 	.navegacion {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
+		gap: 1rem;
 	}
 }
 .navegacion a {
@@ -167,6 +168,17 @@ a {
 	border: 2px solid var(--negro);
 	color: var(--negro);
 	width: 100%;
+}
+.buscador button {
+	background-color: var(--blanco);
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+	text-transform: uppercase;
+	padding: .5rem;
+}
+.buscador button:hover {
+	background-color: var(--negro);
+	color: var(--blanco);
 }
 /* Estilos para el contenedor de sugerencias */
 .sugerencias {
