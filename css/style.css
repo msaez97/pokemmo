@@ -179,6 +179,11 @@ a {
 	border-bottom: 2px solid var(--negro);
 	margin: 1rem 1rem 0 1rem;
 }
+@media (min-width: 950px) {
+	.h1-style {
+		font-size: 1.8rem;
+	}
+}
 .buscador {
 	padding: 2rem 1rem 1rem 1rem;
 	position: relative;
