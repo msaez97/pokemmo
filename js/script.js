@@ -132,10 +132,10 @@ async function comprobarTipos(poketypes, nombre) {
             tipos.type.name = "Normal";
         }
         if (nombre == "mr-mime" && tipos.type.name == "Hada") {
-            tipos.type.name = "Psíquico";
+            tipos.type.name = "";
         }
-        if (nombre == "gardevoir") {
-            tipos.type.name = "Psíquico";
+        if (nombre == "gardevoir" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
         }
         if (nombre == "marill") {
             tipos.type.name = "Agua";
