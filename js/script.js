@@ -168,7 +168,7 @@ async function comprobarTipos(poketypes, nombre) {
             tipos.type.name = "Normal";
         }
         if (nombre == "igglybuff" && tipos.type.name == "Hada") {
-            tipos.type.name = "Normal";
+            tipos.type.name = "";
         }
         if (nombre == "ralts" && tipos.type.name == "Hada") {
             tipos.type.name = "";
@@ -186,6 +186,9 @@ async function comprobarTipos(poketypes, nombre) {
             tipos.type.name = "";
         }
         if (nombre == "whimsicott" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "azurill" && tipos.type.name == "Hada") {
             tipos.type.name = "";
         }
         contenedorPokemonInd.innerHTML += `
