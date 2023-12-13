@@ -43,7 +43,7 @@ async function obtenerDetallesPokemon(url) {
 
 function mostrarPokemon(pokemon) {
     pokemonList.innerHTML += `
-        <a href="pokemon.html?id=${pokemon.id}">
+        <a href="pokemon.php?id=${pokemon.id}">
             <div class="pokemon ${pokemon.name}">
                 <img src="${pokemon.sprites.other.dream_world.front_default}" alt="imagen de ${pokemon.name}" width="150" height="150" loading="lazy">
                 <div class="id_nombre">
