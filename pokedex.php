@@ -13,6 +13,7 @@
 <body>
 	<?php require 'assets/header.php'; ?>
 	<main class="contenedor">
+		<h1>Pokedex Wiki PokeMMO No Oficial en Español</h1>
 		<div class="buscador">
 			<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre..">
 			<div class="sugerencias" id="sugerenciasContainer"></div>
