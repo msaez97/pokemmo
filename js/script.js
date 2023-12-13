@@ -326,8 +326,13 @@ async function buscarTipo(tipo) {
         try {
             const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
             const pokemontipo = await response.json();
-            mostrarPokemon(pokemontipo);
-            comprobarTipos(pokemontipo.types, pokemontipo.name);
+            if (pokemontipo.id <= 648) {
+                mostrarPokemon(pokemontipo);
+                comprobarTipos(pokemontipo.types, pokemontipo.name);
+            } else {
+                return;
+            }
+            
         } catch (error) {
             console.log(error);
         }
