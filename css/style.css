@@ -94,6 +94,15 @@ a {
 	max-width: 100rem;
 	margin: 0 auto;
 }
+.padding-all {
+	padding: 1rem;
+}
+.upper {
+	text-transform: uppercase;
+}
+.negro {
+	color: var(--negro);
+}
 
 /* HEADER */
 .header-container {
@@ -142,6 +151,9 @@ a {
 	border: 2px solid var(--negro);
 	color: var(--negro);
 	width: 100%;
+}
+.mostrartodo:hover {
+	text-decoration: underline;
 }
 #pokemonList {
 	display: grid;

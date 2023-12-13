@@ -1,134 +1,134 @@
 let paginaActual = 1;
-        const elementosPorPagina = 24;
-        const totalPokemon = 648;
-        const urlBase = 'https://pokeapi.co/api/v2/pokemon';
-        const pokemonList = document.getElementById('pokemonList');
+const elementosPorPagina = 24;
+const totalPokemon = 648;
+const urlBase = 'https://pokeapi.co/api/v2/pokemon';
+const pokemonList = document.getElementById('pokemonList');
 
-        async function cargarPagina(pagina) {
-            const offset = (pagina - 1) * elementosPorPagina;
-            const url = `${urlBase}?limit=${elementosPorPagina}&offset=${offset}`;
+async function cargarPagina(pagina) {
+    const offset = (pagina - 1) * elementosPorPagina;
+    const url = `${urlBase}?limit=${elementosPorPagina}&offset=${offset}`;
             
-            // Mostrar el indicador de carga
-            document.getElementById('loadingIndicator').style.display = 'block';
+    // Mostrar el indicador de carga
+    document.getElementById('loadingIndicator').style.display = 'block';
 
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                await cargarSprites(data.results);
-            } catch (error) {
-                console.error('Error al obtener datos:', error);
-            } finally {
-                // Ocultar el indicador de carga después de completar la carga
-                document.getElementById('loadingIndicator').style.display = 'none';
-            }
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        await cargarSprites(data.results);
+    } catch (error) {
+        console.error('Error al obtener datos:', error);
+    } finally {
+        // Ocultar el indicador de carga después de completar la carga
+        document.getElementById('loadingIndicator').style.display = 'none';
+    }
+}
+
+async function cargarSprites(resultados) {
+    const promises = resultados.map(pokemon => obtenerDetallesPokemon(pokemon.url));
+    const pokemonDetails = await Promise.all(promises);
+    // Ordenar los resultados antes de mostrarlos
+    const sortedDetails = pokemonDetails.sort((a, b) => a.id - b.id);
+    sortedDetails.forEach(mostrarPokemon);
+}
+
+async function obtenerDetallesPokemon(url) {
+    try {
+        const response = await fetch(url);
+        const pokemon = await response.json();
+        return pokemon;
+    } catch (error) {
+        console.error('Error al obtener detalles del Pokémon:', error);
+    }
+}
+
+function mostrarPokemon(pokemon) {
+    pokemonList.innerHTML += `
+        <a href="pokemon.html?id=${pokemon.id}">
+            <div class="pokemon ${pokemon.name}">
+                <img src="${pokemon.sprites.other.dream_world.front_default}" alt="imagen de ${pokemon.name}" width="150" height="150" loading="lazy">
+                <div class="id_nombre">
+                    <p class="id_pokedex">#${pokemon.id}</p>
+                    <p class="nombre_pokedex">${pokemon.name}</p>
+                </div>
+                <div class="${pokemon.name}_tipos tipos"></div>
+                <div class="medidas">
+                    <p class="peso">${pokemon.weight / 10} kg</p>
+                    <p class="altura">${pokemon.height / 10} m</p>
+                </div>
+            </div>
+        </a>
+    `;
+    comprobarTipos(pokemon.types, pokemon.name);
+}
+
+async function comprobarTipos(poketypes, nombre) {
+    const contenedorPokemonInd = document.querySelector(`.${nombre}_tipos`);
+    contenedorPokemonInd.innerHTML = "";
+
+    for (const tipos of poketypes) {
+        switch (tipos.type.name) {
+            case "grass":
+                tipos.type.name = "Planta";
+                break;
+            case "poison":
+                tipos.type.name = "Veneno";
+                break;
+            case "fire":
+                tipos.type.name = "Fuego";
+                break;
+            case "flying":
+                tipos.type.name = "Volador";
+                break;
+            case "water":
+                tipos.type.name = "Agua";
+                break;
+            case "bug":
+                tipos.type.name = "Bicho";
+                break;
+            case "normal":
+                tipos.type.name = "Normal";
+                break;
+            case "electric":
+                tipos.type.name = "Eléctrico";
+                break;
+            case "ground":
+                tipos.type.name = "Tierra";
+                break;
+            case "fairy":
+                tipos.type.name = "Hada";
+                break;
+            case "fighting":
+                tipos.type.name = "Lucha";
+                break;
+            case "psychic":
+                tipos.type.name = "Psíquico";
+                break;
+            case "rock":
+                tipos.type.name = "Roca";
+                break;
+            case "steel":
+                tipos.type.name = "Acero";
+                break;
+            case "ice":
+                tipos.type.name = "Hielo";
+                break;
+            case "ghost":
+                tipos.type.name = "Fantasma";
+                break;
+            case "dragon":
+                tipos.type.name = "Dragón";
+                break;
+            case "dark":
+                tipos.type.name = "Siniestro";
+                break;
+            default:
+                break;
         }
-
-        async function cargarSprites(resultados) {
-            const promises = resultados.map(pokemon => obtenerDetallesPokemon(pokemon.url));
-            const pokemonDetails = await Promise.all(promises);
-            // Ordenar los resultados antes de mostrarlos
-            const sortedDetails = pokemonDetails.sort((a, b) => a.id - b.id);
-            sortedDetails.forEach(mostrarPokemon);
-        }
-
-        async function obtenerDetallesPokemon(url) {
-            try {
-                const response = await fetch(url);
-                const pokemon = await response.json();
-                return pokemon;
-            } catch (error) {
-                console.error('Error al obtener detalles del Pokémon:', error);
-            }
-        }
-
-        function mostrarPokemon(pokemon) {
-            pokemonList.innerHTML += `
-                <a href="pokemon.html?id=${pokemon.id}">
-                    <div class="pokemon ${pokemon.name}">
-                        <img src="${pokemon.sprites.other.dream_world.front_default}" alt="imagen de ${pokemon.name}" width="150" height="150" loading="lazy">
-                        <div class="id_nombre">
-                            <p class="id_pokedex">#${pokemon.id}</p>
-                            <p class="nombre_pokedex">${pokemon.name}</p>
-                        </div>
-                        <div class="${pokemon.name}_tipos tipos"></div>
-                        <div class="medidas">
-                            <p class="peso">${pokemon.weight / 10} kg</p>
-                            <p class="altura">${pokemon.height / 10} m</p>
-                        </div>
-                    </div>
-                </a>
-            `;
-            comprobarTipos(pokemon.types, pokemon.name);
-        }
-
-        async function comprobarTipos(poketypes, nombre) {
-            const contenedorPokemonInd = document.querySelector(`.${nombre}_tipos`);
-            contenedorPokemonInd.innerHTML = "";
-
-            for (const tipos of poketypes) {
-                switch (tipos.type.name) {
-                    case "grass":
-                        tipos.type.name = "Planta";
-                        break;
-                    case "poison":
-                        tipos.type.name = "Veneno";
-                        break;
-                    case "fire":
-                        tipos.type.name = "Fuego";
-                        break;
-                    case "flying":
-                        tipos.type.name = "Volador";
-                        break;
-                    case "water":
-                        tipos.type.name = "Agua";
-                        break;
-                    case "bug":
-                        tipos.type.name = "Bicho";
-                        break;
-                    case "normal":
-                        tipos.type.name = "Normal";
-                        break;
-                    case "electric":
-                        tipos.type.name = "Eléctrico";
-                        break;
-                    case "ground":
-                        tipos.type.name = "Tierra";
-                        break;
-                    case "fairy":
-                        tipos.type.name = "Hada";
-                        break;
-                    case "fighting":
-                        tipos.type.name = "Lucha";
-                        break;
-                    case "psychic":
-                        tipos.type.name = "Psíquico";
-                        break;
-                    case "rock":
-                        tipos.type.name = "Roca";
-                        break;
-                    case "steel":
-                        tipos.type.name = "Acero";
-                        break;
-                    case "ice":
-                        tipos.type.name = "Hielo";
-                        break;
-                    case "ghost":
-                        tipos.type.name = "Fantasma";
-                        break;
-                    case "dragon":
-                        tipos.type.name = "Dragón";
-                        break;
-                    case "dark":
-                        tipos.type.name = "Siniestro";
-                        break;
-                    default:
-                        break;
-                }
-                contenedorPokemonInd.innerHTML += `
-                    <p class="${tipos.type.name}">${tipos.type.name}</p>
-                `;
-            }
-        }
+        contenedorPokemonInd.innerHTML += `
+            <p class="${tipos.type.name}">${tipos.type.name}</p>
+        `;
+    }
+}
 
         function cargarPaginaAnterior() {
             if (paginaActual > 1) {
@@ -186,7 +186,16 @@ let paginaActual = 1;
         }        
 
         // Mostrar las sugerencias al escribir en el input
-        function mostrarSugerencias() {
+        async function mostrarSugerencias() {
+
+            const response = await fetch(`${urlBase}?limit=648&offset=0`);
+            const data = await response.json();
+            let sugerencias = [];
+            for (const poke of data.results) {
+                let nombre = poke.name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+                sugerencias.push(nombre);
+            }
+
             const input = document.querySelector(".input-buscador");
             const sugerenciasContainer = document.getElementById("sugerenciasContainer");
 
@@ -199,8 +208,6 @@ let paginaActual = 1;
             // Mostrar sugerencias solo si el filtro no está vacío
             if (filtro !== "") {
                 sugerenciasContainer.style.display = "block";
-                // Simular sugerencias, puedes reemplazar esto con llamadas a la API u otras fuentes de datos
-                const sugerencias = ["Bulbasaur", "Ivysaur", "Charmander", "Charmeleon", "Squirtle", "Wartortle"];
                 sugerencias.forEach(function(sugerencia) {
                     if (sugerencia.toLowerCase().includes(filtro)) {
                         const divSugerencia = document.createElement("div");

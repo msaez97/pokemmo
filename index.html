@@ -23,10 +23,11 @@
     </header>
 	<main class="contenedor">
 		<div class="buscador">
-			<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre o numero de pokedex..">
+			<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre..">
 			<div class="sugerencias" id="sugerenciasContainer"></div>
 			<button onclick="buscarPokemon()">Buscar</button>
 		</div>
+		<a class="padding-all upper negro mostrartodo" href="/">Mostrar Todo</a>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
 	</main>
