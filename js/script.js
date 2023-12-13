@@ -326,7 +326,8 @@ async function buscarTipo(tipo) {
         try {
             const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
             const pokemontipo = await response.json();
-            console.log(pokemontipo.name)
+            mostrarPokemon(pokemontipo);
+            comprobarTipos(pokemontipo.types, pokemontipo.name);
         } catch (error) {
             console.log(error);
         }
