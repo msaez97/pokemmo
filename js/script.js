@@ -137,11 +137,11 @@ async function comprobarTipos(poketypes, nombre) {
         if (nombre == "gardevoir" && tipos.type.name == "Hada") {
             tipos.type.name = "";
         }
-        if (nombre == "marill") {
-            tipos.type.name = "Agua";
+        if (nombre == "marill" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
         }
-        if (nombre == "azumarill") {
-            tipos.type.name = "Agua";
+        if (nombre == "azumarill" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
         }
         contenedorPokemonInd.innerHTML += `
             <p class="${tipos.type.name}">${tipos.type.name}</p>
