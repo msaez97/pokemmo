@@ -217,15 +217,18 @@ async function comprobarTipos(poketypes, nombre) {
             const alturaDeLaVentana = window.innerHeight;
             const alturaDelDocumento = document.documentElement.offsetHeight;
             const scrollActual = window.scrollY;
-
+        
             // Verificar si ya se está cargando o estás en modo búsqueda
             if (cargando || enModoBusqueda) {
                 return;
             }
-
+        
+            // Cambiar el umbral a 2000 para dispositivos móviles
+            const umbralCarga = window.innerWidth <= 768 ? 2000 : 1000;
+        
             // Agregar un pequeño margen para evitar cargar de golpe
             if (
-                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 1000) &&
+                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < umbralCarga) &&
                 ((paginaActual * elementosPorPagina) < totalPokemon)
             ) {
                 cargando = true; // Establecer la variable de cargando
@@ -236,7 +239,7 @@ async function comprobarTipos(poketypes, nombre) {
                 
                 cargando = false; // Restablecer la variable de cargando
             }
-        }
+        }        
 
         // Cargar la primera página al cargar la página
         cargarPagina(paginaActual);
