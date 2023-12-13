@@ -110,6 +110,9 @@ a {
 .padding-all {
 	padding: 1rem;
 }
+.padding-no-bottom {
+	padding: 1rem 1rem 0 1rem;
+}
 .upper {
 	text-transform: uppercase;
 }
@@ -168,6 +171,11 @@ a {
 	}
 }
 /* POKEDEX */
+.h1-style {
+	font-size: 1.4rem;
+	border-bottom: 2px solid var(--negro);
+	margin: 1rem 1rem 0 1rem;
+}
 .buscador {
 	padding: 2rem 1rem 1rem 1rem;
 	position: relative;
