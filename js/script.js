@@ -316,58 +316,59 @@ async function comprobarTipos(poketypes, nombre) {
             }
         });
 
-        let busquedaActiva = false;
+let busquedaActiva = false;
 
-        async function buscarTipo(tipo) {
-            if (busquedaActiva) {
-                // Si la búsqueda está en curso, detén la búsqueda actual
-                busquedaActiva = false;
+async function buscarTipo(tipo) {
+    if (busquedaActiva) {
+        // Si la búsqueda está en curso, detén la búsqueda actual
+        busquedaActiva = false;
+        return;
+    }
+
+    busquedaActiva = true;
+
+    const contenedorPokemon = document.querySelector("#pokemonList");
+    contenedorPokemon.innerHTML = "";
+
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
+        const pokemon = await response.json();
+
+        for (const nombrePoke of pokemon.pokemon) {
+            if (!busquedaActiva) {
+                // Si la búsqueda ya no está activa, detén el bucle
                 return;
             }
-        
-            busquedaActiva = true;
-        
-            const contenedorPokemon = document.querySelector("#pokemonList");
-            contenedorPokemon.innerHTML = "";
-        
+
             try {
-                const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
-                const pokemon = await response.json();
-        
-                for (const nombrePoke of pokemon.pokemon) {
-                    if (!busquedaActiva) {
-                        // Si la búsqueda ya no está activa, detén el bucle
-                        return;
-                    }
-        
-                    try {
-                        const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
-                        const pokemontipo = await response.json();
-        
-                        if (pokemontipo.id <= 648) {
-                            mostrarPokemon(pokemontipo);
-                            comprobarTipos(pokemontipo.types, pokemontipo.name);
-                        } else {
-                            return;
-                        }
-                    } catch (error) {
-                        console.log(error);
-                    }
+                const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
+                const pokemontipo = await response.json();
+
+                if (pokemontipo.id <= 648) {
+                    enModoBusqueda = true;
+                    mostrarPokemon(pokemontipo);
+                    comprobarTipos(pokemontipo.types, pokemontipo.name);
+                } else {
+                    return;
                 }
             } catch (error) {
                 console.log(error);
-            } finally {
-                busquedaActiva = false; // Restablecer el estado de la búsqueda al finalizar
             }
         }
-        
-        // Lógica para interrumpir la búsqueda al hacer clic en el filtro nuevamente
-        const filtro = document.querySelector(".btn-filtros"); // Reemplaza "tuFiltro" con el ID real de tu filtro
-        
-        filtro.addEventListener("click", () => {
-            busquedaActiva = false;
-        });
-        
+    } catch (error) {
+        console.log(error);
+    } finally {
+        busquedaActiva = false; // Restablecer el estado de la búsqueda al finalizar
+    }
+}
+
+// Lógica para interrumpir la búsqueda al hacer clic en el filtro nuevamente
+const filtro = document.querySelector(".btn-filtros"); // Reemplaza "tuFiltro" con el ID real de tu filtro
+
+filtro.addEventListener("click", () => {
+    busquedaActiva = false;
+});
+
 
 var filtroDiv = document.getElementById('filtroDiv');
 
