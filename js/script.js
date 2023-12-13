@@ -320,7 +320,7 @@ async function buscarTipo(tipo) {
 
     const contenedorPokemon = document.querySelector("#pokemonList");
     contenedorPokemon.innerHTML = "";
-    const response = await fetch(`${urlBase}/${tipo}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
     const pokemon = await response.json();
     console.log(pokemon)
 
