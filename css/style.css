@@ -122,6 +122,9 @@ a {
 .negro {
 	color: var(--negro);
 }
+.underline {
+	text-decoration: underline;
+}
 
 /* HEADER */
 .header-container {
