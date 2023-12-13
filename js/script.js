@@ -145,21 +145,30 @@ async function comprobarTipos(poketypes, nombre) {
             }
         }
 
+        let cargando = false; // Nueva variable para rastrear si se está cargando
+
         async function cargarMasPokemon() {
             const alturaDeLaVentana = window.innerHeight;
             const alturaDelDocumento = document.documentElement.offsetHeight;
             const scrollActual = window.scrollY;
-        
-            // Verificar si estás en modo búsqueda y evitar la carga adicional
-            if (enModoBusqueda) {
+
+            // Verificar si ya se está cargando o estás en modo búsqueda
+            if (cargando || enModoBusqueda) {
                 return;
             }
-        
+
+            // Agregar un pequeño margen para evitar cargar de golpe
             if (
-                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 100) &&
+                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 200) &&
                 ((paginaActual * elementosPorPagina) < totalPokemon)
             ) {
+                cargando = true; // Establecer la variable de cargando
                 cargarPaginaSiguiente();
+                
+                // Retraso breve para evitar carga excesiva
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                cargando = false; // Restablecer la variable de cargando
             }
         }
 
