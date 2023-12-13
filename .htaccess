@@ -17,5 +17,8 @@ RewriteRule ^(.*)$ $1.html
 RewriteEngine On
 RewriteBase /
 RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://wiki-pokemmo.com/$1 [L,R]
+
+RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.wiki-pokemmo.com [NC]
 RewriteRule ^(.*)$ https://wiki-pokemmo.com/$1 [L,R=301,NC]
