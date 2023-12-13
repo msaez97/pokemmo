@@ -69,7 +69,7 @@
 		<h2 class="h1-style">Comunidad de entrenadores pokemon de PokeMMO en Español</h2>
 		<p class="padding-no-bottom">En última instancia, la Pokédex en nuestra wiki no oficial es una herramienta dinámica que evoluciona junto con la comunidad de entrenadores. Estamos comprometidos a ofrecer una experiencia integral que no solo informa, sino que también conecta y celebra la diversidad de estilos de juego y logros dentro de la emocionante aventura de PokeMMO. ¡Explora, participa y comparte tus historias en nuestra comunidad dedicada a Pokémon!</p>
 		<p class="padding-no-bottom">En resumen, la sección de la Pokédex en nuestra wiki no oficial de PokeMMO es mucho más que una simple enciclopedia; es una herramienta interactiva y en constante evolución que enriquecerá tu experiencia como entrenador en este emocionante mundo virtual. ¡Explora, descubre y sumérgete en el fascinante universo de los Pokémon en PokeMMO!</p>
-		<p class="padding-no-bottom">Puedes visitar la página oficial del juego desde <a class="azul" href="https://pokemmo.com/es/" target="_blank">Página PokeMMO</a>.</p>
+		<p class="padding-no-bottom">Puedes visitar la página oficial del juego desde <a class="lila" href="https://pokemmo.com/es/" target="_blank">Página PokeMMO</a>.</p>
 		<br>
 	</main>
     <script src="js/script.js"></script>

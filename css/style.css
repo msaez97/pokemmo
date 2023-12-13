@@ -122,8 +122,8 @@ a {
 .negro {
 	color: var(--negro);
 }
-.azul {
-	color: blue;
+.lila {
+	color: #673ab7;
 }
 
 /* HEADER */
