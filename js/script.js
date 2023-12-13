@@ -376,7 +376,11 @@ filtro.addEventListener("click", () => {
         buscarTipo(tipoActual);
     }
 });
-
+// Ejemplo de cómo puedes iniciar la búsqueda con un nuevo tipo después de detenerla
+document.querySelector("#nuevoTipoBtn").addEventListener("click", () => {
+    // Puedes cambiar "nuevoTipo" con el valor del nuevo tipo que deseas buscar
+    buscarTipo("nuevoTipo");
+});
 
 
 var filtroDiv = document.getElementById('filtroDiv');
