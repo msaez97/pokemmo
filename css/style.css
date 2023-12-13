@@ -19,22 +19,21 @@ body {
 a {
  text-decoration: none;
 }
-/* Para navegadores WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
-	width: 12px; /* Ancho de la barra de desplazamiento */
+	width: 6px;
   }
   
   ::-webkit-scrollbar-thumb {
-	background-color: #3498db; /* Color del "pulgón" o la parte deslizable de la barra */
-	border-radius: 6px; /* Bordes redondeados de la parte deslizable */
+	background-color: var(--negro);
+	border-radius: 6px;
   }
   
   ::-webkit-scrollbar-track {
-	background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+	background-color: #f1f1f1;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-	background-color: #2980b9; /* Cambia el color al pasar el ratón sobre la parte deslizable */
+	background-color: var(--negro);
   }
   
 
