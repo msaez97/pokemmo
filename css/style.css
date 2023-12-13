@@ -122,6 +122,9 @@ a {
 .negro {
 	color: var(--negro);
 }
+.rojo {
+	color: red;
+}
 
 /* HEADER */
 .header-container {

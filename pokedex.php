@@ -60,6 +60,10 @@
 		<p class="padding-no-bottom">Cada página de la Pokédex está diseñada de manera intuitiva, permitiendo una fácil navegación para que los usuarios encuentren rápidamente la información que están buscando. Las imágenes vibrantes y las descripciones detalladas brindan una visión completa de la apariencia y características de cada Pokémon, mientras que las secciones interactivas facilitan la búsqueda de datos específicos.</p>
 		<h2 class="h1-style">¡Estrategias de pokemon en nuestra wiki de PokeMMO!</h2>
 		<p class="padding-no-bottom">Además de la información básica de la Pokédex, nuestra wiki también destaca estrategias recomendadas para entrenadores que buscan maximizar el potencial de sus Pokémon en combate. Desde sugerencias de movimientos hasta tácticas de equipo, nuestra Pokédex no oficial es una guía completa que acompaña a los jugadores en su viaje para convertirse en los mejores entrenadores de PokeMMO. ¡Explora las páginas de la Pokédex y descubre el conocimiento necesario para construir un equipo imparable!</p>
+		<h2 class="h1-style">Busqueda y filtros de pokemon avanzados</h2>
+		<p class="padding-no-bottom">Hemos implementado una función de búsqueda avanzada que permite a los entrenadores encontrar Pokémon según criterios específicos, como tipo, hábitat o incluso la región de origen. Esta herramienta facilita la planificación estratégica para la captura y entrenamiento de Pokémon, ofreciendo a los jugadores la capacidad de tomar decisiones informadas sobre la construcción de su equipo.</p>
+		<p class="padding-no-bottom">En resumen, la sección de la Pokédex en nuestra wiki no oficial de PokeMMO es mucho más que una simple enciclopedia; es una herramienta interactiva y en constante evolución que enriquecerá tu experiencia como entrenador en este emocionante mundo virtual. ¡Explora, descubre y sumérgete en el fascinante universo de los Pokémon en PokeMMO!</p>
+		<p>Puedes visitar la pagina oficial del juego desde <a class="rojo" href="https://pokemmo.com/es/" targer="_blank">aquí</a>.</p>
 	</main>
     <script src="js/script.js"></script>
 </body>
