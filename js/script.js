@@ -322,6 +322,8 @@ async function buscarTipo(tipo) {
     contenedorPokemon.innerHTML = "";
     const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
     const pokemon = await response.json();
-    console.log(pokemon.pokemon[0].pokemon.name)
+    for (const nombrePoke of pokemon.pokemon) {
+        console.log(nombrePoke.pokemon.name)
+    }
 
 }
