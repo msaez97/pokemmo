@@ -315,3 +315,13 @@ async function comprobarTipos(poketypes, nombre) {
                 sugerenciasContainer.style.display = "none";
             }
         });
+
+async function buscarTipo(tipo) {
+
+    const contenedorPokemon = document.querySelector("#pokemonList");
+    contenedorPokemon.innerHTML = "";
+    const response = await fetch(`${urlBase}/${tipo}`);
+    const pokemon = await response.json();
+    console.log(pokemon)
+
+}

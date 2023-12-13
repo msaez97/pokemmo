@@ -20,7 +20,7 @@
 			<button class="padding-all upper negro mostrartodo" onclick="location.reload()">Mostrar Todo</button>
 		</div>
 		<div class="tiposfiltro">
-			<button class="padding-all upper negro Planta">Planta</button>
+			<button class="padding-all upper negro Planta" onclick="buscarTipo('grass')">Planta</button>
 			<button class="padding-all upper negro Fuego">Fuego</button>
 			<button class="padding-all upper negro Veneno">Veneno</button>
 			<button class="padding-all upper negro Volador">Volador</button>
