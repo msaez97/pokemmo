@@ -34,14 +34,14 @@
 			<button class="padding-all upper negro Normal" onclick="buscarTipo('normal')">Normal</button>
 			<button class="padding-all upper negro Eléctrico" onclick="buscarTipo('electric')">Eléctrico</button>
 			<button class="padding-all upper negro Tierra" onclick="buscarTipo('ground')">Tierra</button>
-			<button class="padding-all upper negro Lucha" onclick="buscarTipo('fighting')">Lucha</button>
+			<button class="padding-all upper Lucha" onclick="buscarTipo('fighting')">Lucha</button>
 			<button class="padding-all upper negro Psíquico" onclick="buscarTipo('psychic')">Psíquico</button>
 			<button class="padding-all upper negro Roca" onclick="buscarTipo('rock')">Roca</button>
 			<button class="padding-all upper negro Acero" onclick="buscarTipo('steel')">Acero</button>
 			<button class="padding-all upper negro Hielo" onclick="buscarTipo('ice')">Hielo</button>
-			<button class="padding-all upper negro Fantasma" onclick="buscarTipo('ghost')">Fantasma</button>
+			<button class="padding-all upper Fantasma" onclick="buscarTipo('ghost')">Fantasma</button>
 			<button class="padding-all upper negro Dragón" onclick="buscarTipo('dragon')">Dragón</button>
-			<button class="padding-all upper negro Siniestro" onclick="buscarTipo('dark')">Siniestro</button>
+			<button class="padding-all upper Siniestro" onclick="buscarTipo('dark')">Siniestro</button>
 		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
