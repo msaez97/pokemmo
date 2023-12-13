@@ -213,33 +213,59 @@ async function comprobarTipos(poketypes, nombre) {
 
         let cargando = false; // Nueva variable para rastrear si se está cargando
 
-        async function cargarMasPokemon() {
-            const alturaDeLaVentana = window.innerHeight;
-            const alturaDelDocumento = document.documentElement.offsetHeight;
-            const scrollActual = window.scrollY;
+async function cargarMasPokemon() {
+    const alturaDeLaVentana = window.innerHeight;
+    const alturaDelDocumento = document.documentElement.offsetHeight;
+    const scrollActual = window.scrollY;
 
-            // Verificar si ya se está cargando o estás en modo búsqueda
-            if (cargando || enModoBusqueda) {
-                return;
-            }
+    // Verificar si ya se está cargando o estás en modo búsqueda
+    if (cargando || enModoBusqueda) {
+        return;
+    }
 
-            // Agregar un pequeño margen para evitar cargar de golpe
-            if (
-                (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 200) &&
-                ((paginaActual * elementosPorPagina) < totalPokemon)
-            ) {
-                cargando = true; // Establecer la variable de cargando
-                cargarPaginaSiguiente();
-                
-                // Retraso breve para evitar carga excesiva
-                await new Promise(resolve => setTimeout(resolve, 500));
-                
-                cargando = false; // Restablecer la variable de cargando
-            }
+    // Agregar un pequeño margen para evitar cargar de golpe
+    if (
+        (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 200) &&
+        ((paginaActual * elementosPorPagina) < totalPokemon)
+    ) {
+        cargando = true; // Establecer la variable de cargando
+        cargarPaginaSiguiente();
+
+        // Retraso breve para evitar carga excesiva
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        cargando = false; // Restablecer la variable de cargando
+    }
+}
+
+// Modificar el evento scroll para cargar más elementos al llegar al final de los Pokémon ya cargados
+window.addEventListener('scroll', async () => {
+    const alturaDeLaVentana = window.innerHeight;
+    const alturaDelDocumento = document.documentElement.offsetHeight;
+    const scrollActual = window.scrollY;
+
+    // Agregar un pequeño margen para evitar cargar de golpe
+    if (
+        (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 200) &&
+        ((paginaActual * elementosPorPagina) < totalPokemon)
+    ) {
+        // Verificar si ya se está cargando o estás en modo búsqueda
+        if (cargando || enModoBusqueda) {
+            return;
         }
 
-        // Cargar la primera página al cargar la página
-        cargarPagina(paginaActual);
+        cargando = true; // Establecer la variable de cargando
+        await cargarPaginaSiguiente();
+
+        // Retraso breve para evitar carga excesiva
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        cargando = false; // Restablecer la variable de cargando
+    }
+});
+
+// Cargar la primera página al cargar la página
+cargarPagina(paginaActual);
 
         // Agregar el evento scroll para cargar más elementos al llegar al final de la página
         window.addEventListener('scroll', cargarMasPokemon);
