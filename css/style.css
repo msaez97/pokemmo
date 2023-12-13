@@ -140,7 +140,7 @@ a {
 	padding: .5rem;
 	background-color: var(--gris);
 	border-radius: .5rem;
-	border: 1px solid var(--negro);
+	border: 2px solid var(--negro);
 	color: var(--negro);
 	text-align: center;
 	text-transform: uppercase;
