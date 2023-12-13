@@ -322,7 +322,6 @@ async function buscarTipo(tipo) {
     if (busquedaActiva) {
         // Si la búsqueda está en curso, detén la búsqueda actual
         busquedaActiva = false;
-        return;
     }
 
     busquedaActiva = true;
