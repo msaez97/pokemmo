@@ -224,7 +224,7 @@ async function comprobarTipos(poketypes, nombre) {
             }
         
             // Cambiar el umbral a 2000 para dispositivos móviles
-            const umbralCarga = window.innerWidth <= 768 ? 2000 : 1000;
+            const umbralCarga = window.innerWidth <= 768 ? 2200 : 1000;
         
             // Agregar un pequeño margen para evitar cargar de golpe
             if (
