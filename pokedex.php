@@ -15,7 +15,9 @@
 			<div class="sugerencias" id="sugerenciasContainer"></div>
 			<button onclick="buscarPokemon()">Buscar</button>
 		</div>
-		<a class="padding-all upper negro mostrartodo" href="/pokedex">Mostrar Todo</a>
+		<div class="contenedor-mostrar-todo">
+			<button class="padding-all upper negro mostrartodo" href="/pokedex">Mostrar Todo</button>
+		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
 	</main>
