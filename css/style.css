@@ -87,6 +87,10 @@ body {
 	margin: 10px;
 	font-size: 18px;
 }
+.contenedor {
+	max-width: 100rem;
+	margin: 0 auto;
+}
 
 /* HEADER */
 .header-container {
@@ -100,16 +104,6 @@ body {
 	max-width: 20rem;
 	width: 20rem;
 	height: auto;
-}
-.buscador {
-    padding-top: 1rem;
-	position: relative;
-}
-.input-buscador {
-	padding: 1rem;
-	border-radius: 1rem;
-	border: 2px solid var(--negro);
-	color: var(--negro);
 }
 /* Estilos para el contenedor de sugerencias */
 .sugerencias {
@@ -132,6 +126,20 @@ body {
 	background-color: #f2f2f2;
 }
 /* POKEDEX */
+.buscador {
+	padding: 2rem 1rem 1rem 1rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+.input-buscador {
+	padding: 1rem;
+	border-radius: 1rem;
+	border: 2px solid var(--negro);
+	color: var(--negro);
+	width: 100%;
+}
 #pokemonList {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -141,8 +149,6 @@ body {
 @media (min-width: 950px) {
     #pokemonList {
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: 100rem;
-        margin: 0 auto;
     }
 }
 .pokemon {
