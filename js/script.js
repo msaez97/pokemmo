@@ -327,6 +327,7 @@ async function buscarTipo(tipo) {
             const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
             const pokemontipo = await response.json();
             if (pokemontipo.id <= 648) {
+                enModoBusqueda = true;
                 mostrarPokemon(pokemontipo);
                 comprobarTipos(pokemontipo.types, pokemontipo.name);
             } else {
