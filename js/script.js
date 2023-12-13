@@ -345,7 +345,7 @@ var filtroDiv = document.getElementById('filtroDiv');
 
 function mostrarFiltros() {
     if (filtroDiv.style.display === 'none' || filtroDiv.style.display === '') {
-        filtroDiv.style.display = 'block';
+        filtroDiv.style.display = 'grid';
     } else {
         filtroDiv.style.display = 'none';
     }
