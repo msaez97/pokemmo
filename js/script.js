@@ -328,7 +328,7 @@ async function buscarTipo(tipo) {
             const pokemontipo = await response.json();
             console.log(pokemontipo.name)
         } catch (error) {
-            
+            console.log(error);
         }
     }
 
