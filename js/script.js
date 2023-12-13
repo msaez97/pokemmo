@@ -128,6 +128,21 @@ async function comprobarTipos(poketypes, nombre) {
         if (nombre == "clefairy") {
             tipos.type.name = "Normal";
         }
+        if (nombre == "clefable") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "mr-mime" && tipos.type.name == "fairy") {
+            tipos.type.name = "";
+        }
+        if (nombre == "gardevoir" && tipos.type.name == "fairy") {
+            tipos.type.name = "";
+        }
+        if (nombre == "marill"  && tipos.type.name == "fairy") {
+            tipos.type.name = "";
+        }
+        if (nombre == "azumarill" && tipos.type.name == "fairy") {
+            tipos.type.name = "";
+        }
         contenedorPokemonInd.innerHTML += `
             <p class="${tipos.type.name}">${tipos.type.name}</p>
         `;
