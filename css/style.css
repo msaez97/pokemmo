@@ -208,6 +208,9 @@ a {
 }
 .tiposfiltro {
 	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 1rem;
 }
 .tiposfiltro button {
 	border: 2px solid var(--negro);
