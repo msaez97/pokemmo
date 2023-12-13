@@ -227,9 +227,19 @@ a {
 	text-transform: uppercase;
 	margin: 1rem;
 }
+@media (min-width: 950px) {
+	.btn-filtros {
+		display: none;
+	}
+}
 #filtroDiv {
 	display: none;
 	padding: 10px;
+}
+@media (min-width: 950px) {
+	#filtroDiv {
+		display: grid;
+	}
 }
 /* Estilos para el contenedor de sugerencias */
 .sugerencias {
