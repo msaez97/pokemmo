@@ -143,6 +143,51 @@ async function comprobarTipos(poketypes, nombre) {
         if (nombre == "azumarill" && tipos.type.name == "Hada") {
             tipos.type.name = "";
         }
+        if (nombre == "wigglytuff" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "jigglypuff" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "granbull" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "togepi" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "togetic" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "togekiss" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "cleffa" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "snubbull" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "igglybuff" && tipos.type.name == "Hada") {
+            tipos.type.name = "Normal";
+        }
+        if (nombre == "ralts" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "kirlia" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "mawile" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "mime-jr" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "cottonee" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
+        if (nombre == "whimsicott" && tipos.type.name == "Hada") {
+            tipos.type.name = "";
+        }
         contenedorPokemonInd.innerHTML += `
             <p class="${tipos.type.name}">${tipos.type.name}</p>
         `;
