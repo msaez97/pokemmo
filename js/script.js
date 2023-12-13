@@ -3,6 +3,7 @@ const elementosPorPagina = 24;
 const totalPokemon = 648;
 const urlBase = 'https://pokeapi.co/api/v2/pokemon';
 const pokemonList = document.getElementById('pokemonList');
+let enModoBusqueda = false;
 
 async function cargarPagina(pagina) {
     const offset = (pagina - 1) * elementosPorPagina;
@@ -144,11 +145,16 @@ async function comprobarTipos(poketypes, nombre) {
             }
         }
 
-        function cargarMasPokemon() {
+        async function cargarMasPokemon() {
             const alturaDeLaVentana = window.innerHeight;
             const alturaDelDocumento = document.documentElement.offsetHeight;
             const scrollActual = window.scrollY;
-
+        
+            // Verificar si estás en modo búsqueda y evitar la carga adicional
+            if (enModoBusqueda) {
+                return;
+            }
+        
             if (
                 (alturaDelDocumento - (scrollActual + alturaDeLaVentana) < 100) &&
                 ((paginaActual * elementosPorPagina) < totalPokemon)
@@ -168,12 +174,14 @@ async function comprobarTipos(poketypes, nombre) {
         
             if (buscador === "") {
                 // Si el buscador está vacío, cargar la primera página
+                enModoBusqueda = false;
                 paginaActual = 1;
                 const contenedorPokemon = document.querySelector("#pokemonList");
                 contenedorPokemon.innerHTML = "";
                 cargarPagina(paginaActual);
             } else {
                 try {
+                    enModoBusqueda = true;
                     const response = await fetch(`${urlBase}/${buscador}`);
                     const pokemon = await response.json();
                     pokemonList.innerHTML = ""; // Limpiar el contenido actual
