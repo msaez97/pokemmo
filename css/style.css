@@ -127,6 +127,13 @@ a {
 	align-items: center;
 	gap: .5rem;
 }
+@media (min-width: 950px) {
+	.navegacion {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+}
 .navegacion a {
 	text-decoration: none;
 	padding: .5rem;
@@ -136,6 +143,15 @@ a {
 	color: var(--negro);
 	text-align: center;
 	text-transform: uppercase;
+}
+@media (min-width: 950px) {
+	.navegacion a {
+		background-color: transparent;
+		border: none;
+	}
+	.navegacion a:hover {
+		text-decoration: underline;
+	}
 }
 /* POKEDEX */
 .buscador {

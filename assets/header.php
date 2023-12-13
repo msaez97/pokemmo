@@ -1,7 +1,7 @@
 <header>
     <div class="header-container">
 		<div class="header-top">
-			<img class="logo-header" src="https://forums.pokemmo.com/uploads/monthly_2023_09/pokemmo.png.7611d45714c61b1ddcb944309602a3fa.png.699eaa4db60ba6bea79ccb1c1be2d43f.png" alt="Logo Wiki PokeMMO" width="200" height="50">
+			<a href="/"><img class="logo-header" src="https://forums.pokemmo.com/uploads/monthly_2023_09/pokemmo.png.7611d45714c61b1ddcb944309602a3fa.png.699eaa4db60ba6bea79ccb1c1be2d43f.png" alt="Logo Wiki PokeMMO" width="200" height="50"></a>
 		</div>
 		<div class="header-bottom">
 			<nav class="navegacion">
