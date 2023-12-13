@@ -125,6 +125,9 @@ async function comprobarTipos(poketypes, nombre) {
             default:
                 break;
         }
+        if (nombre == "clefairy") {
+            tipos.type.name = "Normal";
+        }
         contenedorPokemonInd.innerHTML += `
             <p class="${tipos.type.name}">${tipos.type.name}</p>
         `;
