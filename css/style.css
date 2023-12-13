@@ -189,6 +189,7 @@ a {
 	align-items: center;
 	gap: 0.5rem;
     font-size: 1.4rem;
+ color: var(--negro);
 }
 .peso, .altura {
 	background-color: var(--blanco);
