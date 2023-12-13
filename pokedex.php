@@ -14,7 +14,7 @@
 	<?php require 'assets/header.php'; ?>
 	<main class="contenedor">
 		<h1 class="h1-style">Pokedex Wiki PokeMMO No Oficial en Español</h1>
-		<p class="padding-no-bottom">¡Bienvenido a esta wiki no oficial en español de PokeMMO! Aquí encontrarás una valiosa fuente de información sobre este fascinante juego que combina el mundo de Pokémon con la experiencia multijugador en línea. En esta plataforma, los entrenadores de todo el mundo se reúnen para explorar regiones conocidas, desafiar gimnasios, intercambiar Pokémon y participar en emocionantes batallas. Nuestra wiki está dedicada a proporcionar detalles detallados sobre aspectos clave del juego, desde estrategias de entrenamiento hasta ubicaciones de Pokémon raros.</p>
+		<p class="padding-no-bottom">¡Bienvenido a esta wiki no oficial en español de PokeMMO! Aquí encontrarás una valiosa fuente de información sobre cada Pokémon de este multijugador en linea.</p>
 		<div class="buscador">
 			<input oninput="mostrarSugerencias()" class="input-buscador" type="text" placeholder="Buscar pokemon por nombre..">
 			<div class="sugerencias" id="sugerenciasContainer"></div>
