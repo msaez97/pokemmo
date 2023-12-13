@@ -316,30 +316,47 @@ async function comprobarTipos(poketypes, nombre) {
             }
         });
 
-async function buscarTipo(tipo) {
+let interrumpirBusqueda = false;
 
+async function buscarTipo(tipo) {
     const contenedorPokemon = document.querySelector("#pokemonList");
     contenedorPokemon.innerHTML = "";
-    const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
-    const pokemon = await response.json();
-    for (const nombrePoke of pokemon.pokemon) {
-        try {
-            const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
-            const pokemontipo = await response.json();
-            if (pokemontipo.id <= 648) {
-                enModoBusqueda = true;
-                mostrarPokemon(pokemontipo);
-                comprobarTipos(pokemontipo.types, pokemontipo.name);
-            } else {
+        
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/type/${tipo}`);
+        const pokemon = await response.json();
+        
+        for (const nombrePoke of pokemon.pokemon) {
+            if (interrumpirBusqueda) {
+                interrumpirBusqueda = false; // Restablecer la variable para futuras búsquedas
                 return;
             }
-            
-        } catch (error) {
-            console.log(error);
+        
+            try {
+                const response = await fetch(`${urlBase}/${nombrePoke.pokemon.name}`);
+                const pokemontipo = await response.json();
+        
+                if (pokemontipo.id <= 648) {
+                    mostrarPokemon(pokemontipo);
+                    comprobarTipos(pokemontipo.types, pokemontipo.name);
+                } else {
+                    return;
+                }
+            } catch (error) {
+                console.log(error);
+            }
         }
+    } catch (error) {
+        console.log(error);
     }
-
 }
+        
+// Lógica para interrumpir la búsqueda al hacer clic en el filtro nuevamente
+const filtro = document.querySelector("#tuFiltro"); // Reemplaza "tuFiltro" con el ID real de tu filtro
+        
+filtro.addEventListener("click", () => {
+    interrumpirBusqueda = true;
+});        
 
 var filtroDiv = document.getElementById('filtroDiv');
 
