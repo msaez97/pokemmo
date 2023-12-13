@@ -225,11 +225,11 @@ a {
 	border: 2px solid var(--negro);
 	border-radius: 1rem;
 	text-transform: uppercase;
+	margin: 1rem;
 }
 #filtroDiv {
 	display: none;
 	padding: 10px;
-	margin-top: 10px;
 }
 /* Estilos para el contenedor de sugerencias */
 .sugerencias {
