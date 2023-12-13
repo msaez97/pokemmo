@@ -322,8 +322,8 @@ async function buscarTipo(tipo) {
     if (busquedaActiva) {
         // Si la búsqueda está en curso, detén la búsqueda actual
         busquedaActiva = false;
-        const contenedorPokemon = document.querySelector("#pokemonList");
-        contenedorPokemon.innerHTML = "";
+        buscarTipo(tipo);
+        return;
     }
 
     busquedaActiva = true;
