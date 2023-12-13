@@ -190,7 +190,6 @@ a {
 }
 .mostrartodo:hover {
 	background-color: var(--negro);
-	color: var(--blanco);
 }
 .mostrartodo a {
 	color: var(--negro);
