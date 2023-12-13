@@ -6,6 +6,15 @@
     <title>Wiki | PokeMMO | Español | No Oficial</title>
 	<link rel="icon" type="image/vnd.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GW3K77TW0W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GW3K77TW0W');
+    </script>
 </head>
 <body>
     <?php require 'assets/header.php'; ?>

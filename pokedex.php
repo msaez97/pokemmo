@@ -9,6 +9,15 @@
 	<link rel="apple-touch-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="js/script.js" as="script" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GW3K77TW0W"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-GW3K77TW0W');
+	</script>
 </head>
 <body>
 	<?php require 'assets/header.php'; ?>
