@@ -16,6 +16,9 @@ html {
 body {
 	font-size: 1.6rem;
 }
+a {
+ text-decoration: none;
+}
 
 /* REUTILIZABLES */
 .Planta, .Fuego, .Veneno,
@@ -168,6 +171,7 @@ body {
     flex-wrap: wrap;
 	gap: 0.5rem;
     font-size: 1.4rem;
+  color: var(--negro);
 }
 .id_pokedex {
 	background-color: var(--blanco);
@@ -182,7 +186,7 @@ body {
 	gap: 0.5rem;
 	padding: 0.5rem;
     font-size: 1.2rem;
-    color: var(--blanco);
+    color: var(--negro);
 }
 
 .medidas {
@@ -191,6 +195,7 @@ body {
 	align-items: center;
 	gap: 0.5rem;
     font-size: 1.4rem;
+ color: var(--negro);
 }
 .peso, .altura {
 	background-color: var(--blanco);
