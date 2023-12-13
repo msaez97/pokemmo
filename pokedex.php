@@ -19,7 +19,8 @@
 		<div class="contenedor-mostrar-todo">
 			<button class="padding-all upper negro mostrartodo" onclick="location.reload()">Mostrar Todo</button>
 		</div>
-		<div class="tiposfiltro">
+		<p>Texto con filtros <button onclick="mostrarFiltros()">Mostrar Filtros</button></p>
+		<div class="tiposfiltro" id="filtroDiv">
 			<button class="padding-all upper negro Planta" onclick="buscarTipo('grass')">Planta</button>
 			<button class="padding-all upper negro Fuego" onclick="buscarTipo('fire')">Fuego</button>
 			<button class="padding-all upper negro Veneno" onclick="buscarTipo('poison')">Veneno</button>

@@ -340,3 +340,12 @@ async function buscarTipo(tipo) {
     }
 
 }
+
+function mostrarFiltros() {
+    var filtroDiv = document.getElementById('filtroDiv');
+    if (filtroDiv.style.display === 'none') {
+        filtroDiv.style.display = 'block';
+    } else {
+        filtroDiv.style.display = 'none';
+    }
+}
