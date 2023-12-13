@@ -131,7 +131,7 @@ async function comprobarTipos(poketypes, nombre) {
         if (nombre == "clefable") {
             tipos.type.name = "Normal";
         }
-        if (nombre == "mr-mime" && tipos.type.name == "fairy") {
+        if (nombre == "mr-mime" && tipos.type.name == "Hada") {
             tipos.type.name = "Psíquico";
         }
         if (nombre == "gardevoir") {
