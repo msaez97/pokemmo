@@ -206,6 +206,12 @@ a {
 	color: var(--blanco);
 	cursor: pointer;
 }
+.tiposfiltro {
+	padding: 1rem;
+}
+.tiposfiltro button {
+	border: 2px solid var(--negro);
+}
 /* Estilos para el contenedor de sugerencias */
 .sugerencias {
 	position: absolute;

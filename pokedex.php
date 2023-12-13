@@ -20,8 +20,31 @@
 			<button class="padding-all upper negro mostrartodo" onclick="location.reload()">Mostrar Todo</button>
 		</div>
 		<div class="tiposfiltro">
-			<button class="padding-all upper negro planta">Planta</button>
-			<button class="padding-all upper negro fuego">Fuego</button>
+			<button class="padding-all upper negro Planta">Planta</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
+			<button class="padding-all upper negro Fuego">Fuego</button>
 		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
