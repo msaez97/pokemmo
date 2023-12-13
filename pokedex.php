@@ -16,7 +16,7 @@
 			<button onclick="buscarPokemon()">Buscar</button>
 		</div>
 		<div class="contenedor-mostrar-todo">
-			<a class="padding-all upper negro mostrartodo" href="/pokedex">Mostrar Todo</a>
+			<button class="padding-all upper negro mostrartodo" onclick="location.reload()">Mostrar Todo</button>
 		</div>
 		<div id="pokemonList"></div>
 		<div id="loadingIndicator">Cargando...</div>
