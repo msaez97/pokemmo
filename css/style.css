@@ -405,6 +405,10 @@ a {
 	margin: 1rem 0;
 	padding: 1rem;
 }
+.enlacesOficiales a {
+	color: var(--negro);
+	border-bottom: 2px solid var(--negro);
+}
 .grid-index {
 	display: grid;
 	grid-template-columns: 1fr;

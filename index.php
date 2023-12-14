@@ -83,7 +83,7 @@
                     <a class="enlaceDatosPoke" href="">Entrenamiento EV</a>
                     <a class="enlaceDatosPoke" href="">Hab. Recogida</a>
                 </div>
-                <p class="infoContenedor">Información sobre los pokemon disponibles y metodos de crianza y captura.</p>
+                <p class="infoContenedor">Información sobre los pokemon disponibles, metodos de crianza y captura.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
