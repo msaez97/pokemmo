@@ -71,7 +71,7 @@
                 <div class="juegoDatos">
                     <a class="enlaceDatosPoke" href="">Pokédex</a>
                     <a class="enlaceDatosPoke" href="">Alfas</a>
-                    <a class="enlaceDatosPoke" href="">Bandas????</a>
+                    <a class="enlaceDatosPoke" href="">Manadas</a>
                     <a class="enlaceDatosPoke" href="">Fenomenos</a>
                     <a class="enlaceDatosPoke" href="">Hordas</a>
                     <a class="enlaceDatosPoke" href="">Legendarios</a>
@@ -97,13 +97,13 @@
                     <a class="enlaceDatosObj" href="">Crianza</a>
                     <a class="enlaceDatosObj" href="">Batalla</a>
                     <a class="enlaceDatosObj" href="">Semillas</a>
-                    <a class="enlaceDatosObj" href="">Hold</a>
+                    <a class="enlaceDatosObj" href="">Caracteristicas</a>
                     <a class="enlaceDatosObj" href="">Usables</a>
-                    <a class="enlaceDatosObj" href="">Powder</a>
+                    <a class="enlaceDatosObj" href="">Polvo</a>
                     <a class="enlaceDatosObj" href="">Evolución</a>
                     <a class="enlaceDatosObj" href="">Historia</a>
                     <a class="enlaceDatosObj" href="">Cosmeticos</a>
-                    <a class="enlaceDatosObj" href="">Boost</a>
+                    <a class="enlaceDatosObj" href="">Aumento</a>
                     <a class="enlaceDatosObj" href="">Poké Ball</a>
                     <a class="enlaceDatosObj" href="">Señuelos</a>
                     <a class="enlaceDatosObj" href="">Miscelania</a>
@@ -126,7 +126,7 @@
                     <a class="enlaceDatosReg" href="">Sinnoh</a>
                     <a class="enlaceDatosReg" href="">Hoenn</a>
                     <a class="enlaceDatosReg" href="">Teselia</a>
-                    <a class="enlaceDatosReg" href="">Islas Sevii</a>
+                    <a class="enlaceDatosReg" href="">Islas Sete</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -157,16 +157,20 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosNpc" href="">Instalar Juego</a>
-                    <a class="enlaceDatosNpc" href="">Objetos</a>
-                    <a class="enlaceDatosNpc" href="">Crianza</a>
-                    <a class="enlaceDatosNpc" href="">Tienda</a>
-                    <a class="enlaceDatosNpc" href="">Regiones</a>
-                    <a class="enlaceDatosNpc" href="">Bayas</a>
-                    <a class="enlaceDatosNpc" href="">Trading</a>
-                    <a class="enlaceDatosNpc" href="">Pokedex</a>
+                    <a class="enlaceDatosNpc" href="">Rival</a>
+                    <a class="enlaceDatosNpc" href="">Madre</a>
+                    <a class="enlaceDatosNpc" href="">Lideres Gim</a>
+                    <a class="enlaceDatosNpc" href="">Master Movimiento</a>
+                    <a class="enlaceDatosNpc" href="">Movimiento Maniaco</a>
+                    <a class="enlaceDatosNpc" href="">Intercambio</a>
+                    <a class="enlaceDatosNpc" href="">Tutores Movimiento</a>
+                    <a class="enlaceDatosNpc" href="">Elite</a>
+                    <a class="enlaceDatosNpc" href="">Campeon</a>
                     <a class="enlaceDatosNpc" href="">Crafteo</a>
-                    <a class="enlaceDatosNpc" href="">PVP</a>
+                    <a class="enlaceDatosNpc" href="">Rojo</a>
+                    <a class="enlaceDatosNpc" href="">Pirata</a>
+                    <a class="enlaceDatosNpc" href="">Crianza</a>
+                    <a class="enlaceDatosNpc" href="">Guarderia</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -176,16 +180,24 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosMec" href="">Instalar Juego</a>
-                    <a class="enlaceDatosMec" href="">Objetos</a>
+                    <a class="enlaceDatosMec" href="">Daño</a>
+                    <a class="enlaceDatosMec" href="">Prioridad</a>
                     <a class="enlaceDatosMec" href="">Crianza</a>
-                    <a class="enlaceDatosMec" href="">Tienda</a>
-                    <a class="enlaceDatosMec" href="">Regiones</a>
+                    <a class="enlaceDatosMec" href="">Golpe Critico</a>
+                    <a class="enlaceDatosMec" href="">Habilidades</a>
                     <a class="enlaceDatosMec" href="">Bayas</a>
-                    <a class="enlaceDatosMec" href="">Trading</a>
-                    <a class="enlaceDatosMec" href="">Pokedex</a>
-                    <a class="enlaceDatosMec" href="">Crafteo</a>
-                    <a class="enlaceDatosMec" href="">PVP</a>
+                    <a class="enlaceDatosMec" href="">Efecto Estado</a>
+                    <a class="enlaceDatosMec" href="">Tiempo</a>
+                    <a class="enlaceDatosMec" href="">Ratio Captura</a>
+                    <a class="enlaceDatosMec" href="">MultiBatalla</a>
+                    <a class="enlaceDatosMec" href="">Retroceder</a>
+                    <a class="enlaceDatosMec" href="">Shiny</a>
+                    <a class="enlaceDatosMec" href="">Bufos</a>
+                    <a class="enlaceDatosMec" href="">Debufos</a>
+                    <a class="enlaceDatosMec" href="">Limite Nivel</a>
+                    <a class="enlaceDatosMec" href="">Particulas</a>
+                    <a class="enlaceDatosMec" href="">Felicidad</a>
+                    <a class="enlaceDatosMec" href="">Estado Donador</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -195,16 +207,12 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosEve" href="">Instalar Juego</a>
-                    <a class="enlaceDatosEve" href="">Objetos</a>
-                    <a class="enlaceDatosEve" href="">Crianza</a>
-                    <a class="enlaceDatosEve" href="">Tienda</a>
-                    <a class="enlaceDatosEve" href="">Regiones</a>
-                    <a class="enlaceDatosEve" href="">Bayas</a>
-                    <a class="enlaceDatosEve" href="">Trading</a>
-                    <a class="enlaceDatosEve" href="">Pokedex</a>
-                    <a class="enlaceDatosEve" href="">Crafteo</a>
-                    <a class="enlaceDatosEve" href="">PVP</a>
+                    <a class="enlaceDatosEve" href="">Captura Mensual</a>
+                    <a class="enlaceDatosEve" href="">Aniversario</a>
+                    <a class="enlaceDatosEve" href="">Halloween</a>
+                    <a class="enlaceDatosEve" href="">Torneo Mensual</a>
+                    <a class="enlaceDatosEve" href="">Año Nuevo Lunar</a>
+                    <a class="enlaceDatosEve" href="">Navidad</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -214,16 +222,9 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosAdd" href="">Instalar Juego</a>
-                    <a class="enlaceDatosAdd" href="">Objetos</a>
-                    <a class="enlaceDatosAdd" href="">Crianza</a>
-                    <a class="enlaceDatosAdd" href="">Tienda</a>
-                    <a class="enlaceDatosAdd" href="">Regiones</a>
-                    <a class="enlaceDatosAdd" href="">Bayas</a>
-                    <a class="enlaceDatosAdd" href="">Trading</a>
-                    <a class="enlaceDatosAdd" href="">Pokedex</a>
-                    <a class="enlaceDatosAdd" href="">Crafteo</a>
-                    <a class="enlaceDatosAdd" href="">PVP</a>
+                    <a class="enlaceDatosAdd" href="">Interfaz</a>
+                    <a class="enlaceDatosAdd" href="">Sprites</a>
+                    <a class="enlaceDatosAdd" href="">Sonido</a>
                 </div>
             </div>
         </div>
