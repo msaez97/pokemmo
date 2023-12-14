@@ -339,3 +339,32 @@ a {
 	border-radius: 0.5rem;
 	padding: 0.25rem 0.5rem;
 }
+/* PAGINA INICIO */
+.grid-index {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+.juegoCarta {
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+}
+.juegoHeader {
+	display: flex;
+	align-items: center;
+	background-color: #F05030;
+	margin: 1rem 0;
+}
+.juegoBack {
+	width: 100%;
+}
+.juegoH2 {
+	position: absolute;
+	margin: 1rem;
+	padding: 1rem;
+	background-color: var(--blanco);
+	text-transform: uppercase;
+}
+.juegoH2Letra {
+	color: #F05030;
+}
