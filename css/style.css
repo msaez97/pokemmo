@@ -498,3 +498,109 @@ a {
 .enlaceDatosAdd:hover {
 	background-color: #98A8F0;
 }
+/* POKEMON */
+.cartaPokemon {
+	margin: 1rem;
+}
+.stats {
+	display: grid;
+	gap: .5rem;
+	margin: 1rem 0;
+	padding: 1rem;
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+}
+.rellena_barraHP {
+	height: .5rem;
+	background-color: #78C850;
+	margin-left: 1rem;
+}
+.rellena_barraATQ {
+	height: .5rem;
+	background-color: #F05030;
+	margin-left: 1rem;
+}
+.rellena_barraDEF {
+	height: .5rem;
+	background-color: #3899F8;
+	margin-left: 1rem;
+}
+.rellena_barraATQESP {
+	height: .5rem;
+	background-color: #7860E0;
+	margin-left: 1rem;
+}
+.rellena_barraDEFESP {
+	height: .5rem;
+	background-color: #B8A058;
+	margin-left: 1rem;
+}
+.rellena_barraVEL {
+	height: .5rem;
+	background-color: #F8D030;
+	margin-left: 1rem;
+}
+.barraHP, .barraATQ, .barraDEF,
+.barraATQESP, .barraDEFESP, .barraVEL {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.textoHP, .textoATQ, .textoDEF,
+.textoATQESP, .textoDEFESP, .textoVEL {
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+	padding: .5rem;
+	min-width: 8rem;
+	text-align: center;
+}
+.textoHP {
+	background-color: #78C850;
+}
+.textoATQ {
+	background-color: #F05030;
+}
+.textoDEF {
+	background-color: #3899F8;
+}
+.textoATQESP {
+	background-color: #7860E0;
+}
+.textoDEFESP {
+	background-color: #B8A058;
+}
+.textoVEL {
+	background-color: #F8D030;
+}
+.textoStat {
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+	padding: .5rem;
+	min-width: 3rem;
+	text-align: center;
+	margin-left: 1rem;
+}
+.cartaInfo {
+	border: 2px solid var(--negro);
+	border-radius: 1rem;
+}
+.cartaInfo img {
+	width: 100%;
+	height: auto;
+}
+#cambiarShiny {
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 1rem;
+	text-transform: uppercase;
+}
+.infoPoke {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 1rem;
+	text-transform: uppercase;
+}
