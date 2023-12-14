@@ -74,5 +74,7 @@
 		<br>
 	</main>
     <script src="../js/script.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4911360042357338"
+     crossorigin="anonymous"></script>
 </body>
 </html>

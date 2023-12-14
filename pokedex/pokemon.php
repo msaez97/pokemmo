@@ -28,5 +28,7 @@ $pokemonName = $_GET["name"];
     <div class="cartaPokemon"></div>
 
     <script src="../js/pokemon.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4911360042357338"
+     crossorigin="anonymous"></script>
 </body>
 </html>
