@@ -5,8 +5,8 @@
 		</div>
 		<div class="header-bottom">
 			<nav class="navegacion">
-				<a href="/">Inicio</a>
-				<a href="pokedex">Pokedex</a>
+				<a href="./">Inicio</a>
+				<a href="./pokedex">Pokedex</a>
 			</nav>
 		</div>
 	</div>
