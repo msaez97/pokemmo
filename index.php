@@ -28,7 +28,7 @@
                 <div class="juegoHeader">
                     <div class="juegoBack"></div>
                     <h2 class="juegoH2"><span class="juegoH2Letra">S</span>obre el Juego</h2>
-                    <img src="img/profesor_oak.png" alt="profesor Oak" width="48" height="32">
+                    <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
                     <p>Instalar Juego</p>
