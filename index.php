@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-4911360042357338">
     <meta name="description" content="Wiki No Oficial de PokeMMO en Español, Todo Tipo de Guias, Pokedex Moderna, y Todo Sobre el Multijugador Online.">
     <title>Wiki | PokeMMO | Español | No Oficial</title>
 	<link rel="icon" type="image/vnd.icon" href="img/favicon.ico">
