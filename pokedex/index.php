@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Mira la pokedex de la Wiki de PokeMMO no oficial, encuentra cualquier pokemon, totalmente en español.">
     <title>Wiki | Pokedex | PokeMMO | Español | No Oficial</title>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="js/script.js" as="script" />
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preload" href="../js/script.js" as="script" />
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GW3K77TW0W"></script>
 	<script>
@@ -72,6 +72,6 @@
 		<p class="padding-no-bottom">Puedes visitar la página oficial del juego desde <a class="negro underline" href="https://pokemmo.com/es/" target="_blank">Página PokeMMO</a>.</p>
 		<br>
 	</main>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

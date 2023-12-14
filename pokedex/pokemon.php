@@ -7,7 +7,7 @@ $pokemonName = $_GET["name"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo ucfirst($pokemonName); ?> | Wiki | PokeMMO | Español | No Oficial</title>
-    <link rel="icon" type="image/vnd.icon" href="img/favicon.ico">
+    <link rel="icon" type="image/vnd.icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GW3K77TW0W"></script>
@@ -24,6 +24,6 @@ $pokemonName = $_GET["name"];
 
 
 
-    <script src="js/pokemon.js"></script>
+    <script src="../js/pokemon.js"></script>
 </body>
 </html>
