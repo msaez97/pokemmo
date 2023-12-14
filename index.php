@@ -19,10 +19,10 @@
 <body>
     <?php require 'assets/header.php'; ?>
 	<main class="contenedor padding-all">
-		<h1>Bienvenidos a la Wiki de PokeMMO No Oficial en Español</h1>
+		<h1 class="indexH1">Bienvenidos a la Wiki de PokeMMO No Oficial en Español</h1>
         <p>La primera wiki para la comunidad de habla hispana de PokeMMO.</p>
         <p>Puedes encontrar desde guias de las regiones, pasando por una pokedex moderna e intuitiva, hasta crianza y equipos PVP de la comunidad.</p>
-        <p><strong>Links Oficiales del Juego y Redes:</strong> <a href="https://pokemmo.com/es/" target="_blank">Página Web</a> - <a href="https://forums.pokemmo.com/" target="_blank">Foros</a> - <a href="https://www.facebook.com/PokeMMORPG" target="_blank">Facebook</a> - <a href="https://twitter.com/pokemmo" target="_blank">Twitter</a> - <a href="https://www.reddit.com/r/pokemmo/" target="_blank">Reddit</a> - <a href="https://discord.com/invite/zXkuuDNYJh" target="_blank">Discord</a></p>
+        <p class="enlacesOficiales"><strong>Links Oficiales del Juego y Redes:</strong> <a href="https://pokemmo.com/es/" target="_blank">Página Web</a> - <a href="https://forums.pokemmo.com/" target="_blank">Foros</a> - <a href="https://www.facebook.com/PokeMMORPG" target="_blank">Facebook</a> - <a href="https://twitter.com/pokemmo" target="_blank">Twitter</a> - <a href="https://www.reddit.com/r/pokemmo/" target="_blank">Reddit</a> - <a href="https://discord.com/invite/zXkuuDNYJh" target="_blank">Discord</a></p>
         <div class="grid-index">
             <div class="juegoCarta">
                 <div class="juegoHeader">
