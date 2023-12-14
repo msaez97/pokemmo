@@ -410,9 +410,17 @@ a {
 	grid-template-columns: 1fr;
 	gap: 1rem;
 }
+@media (min-width: 950px) {
+	.grid-index {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
 .contenedorDatos {
 	border: 2px solid var(--negro);
 	border-radius: 1rem;
+}
+.infoContenedor {
+	padding: 0 2rem 1rem 2rem;
 }
 .juegoHeader {
 	display: flex;

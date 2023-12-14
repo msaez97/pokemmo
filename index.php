@@ -40,10 +40,11 @@
                     <a class="enlaceDatosSobre" href="">Regiones</a>
                     <a class="enlaceDatosSobre" href="">Bayas</a>
                     <a class="enlaceDatosSobre" href="">Trading</a>
-                    <a class="enlaceDatosSobre" href="">Pokedex</a>
+                    <a class="enlaceDatosSobre" href="pokedex">Pokedex</a>
                     <a class="enlaceDatosSobre" href="">Crafteo</a>
                     <a class="enlaceDatosSobre" href="">PVP</a>
                 </div>
+                <p class="infoContenedor">Información sobre las toda la jugabilidad y posibilidades en PokeMMO.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -59,24 +60,28 @@
                     <a class="enlaceDatosAct" href="">Change Log 28/04/23</a>
                     <a class="enlaceDatosAct" href="">Año Nuevo Lunar 23</a>
                 </div>
+                <p class="infoContenedor">Información sobre las actualizaciones en PokeMMO.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
                     <div class="backWidth Agua"></div>
-                    <h2 class="juegoH2"><span class="AguaColor">P</span>okedex</h2>
+                    <h2 class="juegoH2"><span class="AguaColor">P</span>okémon</h2>
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosPoke" href="">Instalar Juego</a>
-                    <a class="enlaceDatosPoke" href="">Objetos</a>
+                    <a class="enlaceDatosPoke" href="">Pokédex</a>
+                    <a class="enlaceDatosPoke" href="">Alfas</a>
+                    <a class="enlaceDatosPoke" href="">Bandas????</a>
+                    <a class="enlaceDatosPoke" href="">Fenomenos</a>
+                    <a class="enlaceDatosPoke" href="">Hordas</a>
+                    <a class="enlaceDatosPoke" href="">Legendarios</a>
+                    <a class="enlaceDatosPoke" href="">Miticos</a>
+                    <a class="enlaceDatosPoke" href="">Objetos Captura</a>
                     <a class="enlaceDatosPoke" href="">Crianza</a>
-                    <a class="enlaceDatosPoke" href="">Tienda</a>
-                    <a class="enlaceDatosPoke" href="">Regiones</a>
-                    <a class="enlaceDatosPoke" href="">Bayas</a>
-                    <a class="enlaceDatosPoke" href="">Trading</a>
-                    <a class="enlaceDatosPoke" href="">Pokedex</a>
-                    <a class="enlaceDatosPoke" href="">Crafteo</a>
-                    <a class="enlaceDatosPoke" href="">PVP</a>
+                    <a class="enlaceDatosPoke" href="">Evolución</a>
+                    <a class="enlaceDatosPoke" href="">Tipos</a>
+                    <a class="enlaceDatosPoke" href="">Entrenamiento EV</a>
+                    <a class="enlaceDatosPoke" href="">Hab. Recogida</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -86,16 +91,27 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosObj" href="">Instalar Juego</a>
-                    <a class="enlaceDatosObj" href="">Objetos</a>
-                    <a class="enlaceDatosObj" href="">Crianza</a>
-                    <a class="enlaceDatosObj" href="">Tienda</a>
-                    <a class="enlaceDatosObj" href="">Regiones</a>
+                    <a class="enlaceDatosObj" href="">Aventura</a>
+                    <a class="enlaceDatosObj" href="">Vitaminas</a>
                     <a class="enlaceDatosObj" href="">Bayas</a>
-                    <a class="enlaceDatosObj" href="">Trading</a>
-                    <a class="enlaceDatosObj" href="">Pokedex</a>
-                    <a class="enlaceDatosObj" href="">Crafteo</a>
-                    <a class="enlaceDatosObj" href="">PVP</a>
+                    <a class="enlaceDatosObj" href="">Crianza</a>
+                    <a class="enlaceDatosObj" href="">Batalla</a>
+                    <a class="enlaceDatosObj" href="">Semillas</a>
+                    <a class="enlaceDatosObj" href="">Hold</a>
+                    <a class="enlaceDatosObj" href="">Usables</a>
+                    <a class="enlaceDatosObj" href="">Powder</a>
+                    <a class="enlaceDatosObj" href="">Evolución</a>
+                    <a class="enlaceDatosObj" href="">Historia</a>
+                    <a class="enlaceDatosObj" href="">Cosmeticos</a>
+                    <a class="enlaceDatosObj" href="">Boost</a>
+                    <a class="enlaceDatosObj" href="">Poké Ball</a>
+                    <a class="enlaceDatosObj" href="">Señuelos</a>
+                    <a class="enlaceDatosObj" href="">Miscelania</a>
+                    <a class="enlaceDatosObj" href="">TM</a>
+                    <a class="enlaceDatosObj" href="">HM</a>
+                    <a class="enlaceDatosObj" href="">Ocarina</a>
+                    <a class="enlaceDatosObj" href="">Medicinas</a>
+                    <a class="enlaceDatosObj" href="">Puntos RP</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -105,16 +121,12 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosReg" href="">Instalar Juego</a>
-                    <a class="enlaceDatosReg" href="">Objetos</a>
-                    <a class="enlaceDatosReg" href="">Crianza</a>
-                    <a class="enlaceDatosReg" href="">Tienda</a>
-                    <a class="enlaceDatosReg" href="">Regiones</a>
-                    <a class="enlaceDatosReg" href="">Bayas</a>
-                    <a class="enlaceDatosReg" href="">Trading</a>
-                    <a class="enlaceDatosReg" href="">Pokedex</a>
-                    <a class="enlaceDatosReg" href="">Crafteo</a>
-                    <a class="enlaceDatosReg" href="">PVP</a>
+                    <a class="enlaceDatosReg" href="">Kanto</a>
+                    <a class="enlaceDatosReg" href="">Johto</a>
+                    <a class="enlaceDatosReg" href="">Sinnoh</a>
+                    <a class="enlaceDatosReg" href="">Hoenn</a>
+                    <a class="enlaceDatosReg" href="">Teselia</a>
+                    <a class="enlaceDatosReg" href="">Islas Sevii</a>
                 </div>
             </div>
             <div class="contenedorDatos">
@@ -124,16 +136,18 @@
                     <img src="img/profesor_oak.png" alt="profesor Oak" width="32" height="48">
                 </div>
                 <div class="juegoDatos">
-                    <a class="enlaceDatosLoc" href="">Instalar Juego</a>
-                    <a class="enlaceDatosLoc" href="">Objetos</a>
-                    <a class="enlaceDatosLoc" href="">Crianza</a>
-                    <a class="enlaceDatosLoc" href="">Tienda</a>
-                    <a class="enlaceDatosLoc" href="">Regiones</a>
-                    <a class="enlaceDatosLoc" href="">Bayas</a>
-                    <a class="enlaceDatosLoc" href="">Trading</a>
-                    <a class="enlaceDatosLoc" href="">Pokedex</a>
-                    <a class="enlaceDatosLoc" href="">Crafteo</a>
-                    <a class="enlaceDatosLoc" href="">PVP</a>
+                    <a class="enlaceDatosLoc" href="">Ciudades</a>
+                    <a class="enlaceDatosLoc" href="">Safari</a>
+                    <a class="enlaceDatosLoc" href="">Gimnasios</a>
+                    <a class="enlaceDatosLoc" href="">Pueblos</a>
+                    <a class="enlaceDatosLoc" href="">Centros Pokemon</a>
+                    <a class="enlaceDatosLoc" href="">Liga Pokemon</a>
+                    <a class="enlaceDatosLoc" href="">Tienda Pokemon</a>
+                    <a class="enlaceDatosLoc" href="">Frente de Batalla</a>
+                    <a class="enlaceDatosLoc" href="">Rutas</a>
+                    <a class="enlaceDatosLoc" href="">Grandes Almacenes</a>
+                    <a class="enlaceDatosLoc" href="">Puntos Referencia</a>
+                    <a class="enlaceDatosLoc" href="">Guarderias</a>
                 </div>
             </div>
             <div class="contenedorDatos">
