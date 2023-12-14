@@ -363,11 +363,15 @@ a {
 .juegoHeader {
 	display: flex;
 	align-items: center;
-	background-color: #F05030;
 	margin: 1rem 0;
 }
 .juegoBack {
 	width: 100%;
+	height: 2rem;
+	background-color: #F05030;
+}
+.juegoCarta img {
+	margin-right: 1rem;
 }
 .juegoH2 {
 	position: absolute;
