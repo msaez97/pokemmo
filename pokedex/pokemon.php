@@ -20,7 +20,7 @@ $pokemonName = $_GET["name"];
     </script>
 </head>
 <body>
-    <?php require 'assets/header.php'; ?>
+    <?php require '../assets/header.php'; ?>
 
 
 
