@@ -82,8 +82,8 @@
                     <a class="enlaceDatosPoke" href="">Tipos</a>
                     <a class="enlaceDatosPoke" href="">Entrenamiento EV</a>
                     <a class="enlaceDatosPoke" href="">Hab. Recogida</a>
-                    <p class="infoContenedor">Información sobre los pokemon disponibles y metodos de crianza y captura.</p>
                 </div>
+                <p class="infoContenedor">Información sobre los pokemon disponibles y metodos de crianza y captura.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -113,8 +113,8 @@
                     <a class="enlaceDatosObj" href="">Ocarina</a>
                     <a class="enlaceDatosObj" href="">Medicinas</a>
                     <a class="enlaceDatosObj" href="">Puntos RP</a>
-                    <p class="infoContenedor">Información sobre todos los objetos que hay en PokeMMO y usos disponibles.</p>
                 </div>
+                <p class="infoContenedor">Información sobre todos los objetos que hay en PokeMMO y usos disponibles.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -129,8 +129,8 @@
                     <a class="enlaceDatosReg" href="">Hoenn</a>
                     <a class="enlaceDatosReg" href="">Teselia</a>
                     <a class="enlaceDatosReg" href="">Islas Sete</a>
-                    <p class="infoContenedor">Información sobre las regiones en el juego.</p>
                 </div>
+                <p class="infoContenedor">Información sobre las regiones en el juego.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -151,8 +151,8 @@
                     <a class="enlaceDatosLoc" href="">Grandes Almacenes</a>
                     <a class="enlaceDatosLoc" href="">Puntos Referencia</a>
                     <a class="enlaceDatosLoc" href="">Guarderias</a>
-                    <p class="infoContenedor">Información sobre las localizaciones en el juego y que se puede hacer o encontrar.</p>
                 </div>
+                <p class="infoContenedor">Información sobre las localizaciones en el juego y que se puede hacer o encontrar.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -175,8 +175,8 @@
                     <a class="enlaceDatosNpc" href="">Pirata</a>
                     <a class="enlaceDatosNpc" href="">Crianza</a>
                     <a class="enlaceDatosNpc" href="">Guarderia</a>
-                    <p class="infoContenedor">Información sobre los NPC'S de PokeMMO y que hace cada uno.</p>
                 </div>
+                <p class="infoContenedor">Información sobre los NPC'S de PokeMMO y que hace cada uno.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -203,8 +203,8 @@
                     <a class="enlaceDatosMec" href="">Particulas</a>
                     <a class="enlaceDatosMec" href="">Felicidad</a>
                     <a class="enlaceDatosMec" href="">Estado Donador</a>
-                    <p class="infoContenedor">Información sobre las mecanicas de PokeMMO.</p>
                 </div>
+                <p class="infoContenedor">Información sobre las mecanicas de PokeMMO.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -219,8 +219,8 @@
                     <a class="enlaceDatosEve" href="">Torneo Mensual</a>
                     <a class="enlaceDatosEve" href="">Año Nuevo Lunar</a>
                     <a class="enlaceDatosEve" href="">Navidad</a>
-                    <p class="infoContenedor">Información sobre los eventos tanto mensuales como especiales.</p>
                 </div>
+                <p class="infoContenedor">Información sobre los eventos tanto mensuales como especiales.</p>
             </div>
             <div class="contenedorDatos">
                 <div class="juegoHeader">
@@ -232,8 +232,8 @@
                     <a class="enlaceDatosAdd" href="">Interfaz</a>
                     <a class="enlaceDatosAdd" href="">Sprites</a>
                     <a class="enlaceDatosAdd" href="">Sonido</a>
-                    <p class="infoContenedor">Información sobre los add-ons que puedes añadir al juego para cambiar como se ve o los sonidos.</p>
                 </div>
+                <p class="infoContenedor">Información sobre los add-ons que puedes añadir al juego para cambiar como se ve o los sonidos.</p>
             </div>
         </div>
 	</main>
