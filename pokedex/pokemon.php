@@ -25,7 +25,7 @@ $pokemonName = $_GET["name"];
 <body>
     <?php require '../assets/header.php'; ?>
 
-
+    <div class="cartaPokemon"></div>
 
     <script src="../js/pokemon.js"></script>
 </body>
