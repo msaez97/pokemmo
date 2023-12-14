@@ -18,7 +18,7 @@
 </head>
 <body>
     <?php require 'assets/header.php'; ?>
-	<main class="contenedor">
+	<main class="contenedor padding-all">
 		<h1>Bienvenidos a la Wiki de PokeMMO No Oficial en Español</h1>
         <p>La primera wiki para la comunidad de habla hispana de PokeMMO.</p>
         <p>Puedes encontrar desde guias de las regiones, pasando por una pokedex moderna e intuitiva, hasta crianza y equipos PVP de la comunidad.</p>
