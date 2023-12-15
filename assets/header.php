@@ -16,85 +16,398 @@
               <a href="/">Inicio</a>
             </li>
             <li class="nav-link" style="--i: .85s">
-              <p>Semillas <span>&#9660;</span></p>
+              <p>El Juego <span>&#9660;</span></p>
               <div class="dropdown">
                 <ul>
                   <li class="dropdown-link">
-                    <a href="semillas/">Ver todas</a>
+                    <a href="">Instalar Juego</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/semillas/semillas-pimiento">Semillas de Pimiento</a>
+                    <a href="">Objetos</a>
                   </li>
                   <li class="dropdown-link">
-					<a href="https://semillasde.es/semillas/semillas-tomate">Semillas de Tomate</a>
+					<a href="">Crianza</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/semillas/semillas-fresa">Semillas de Fresas</a>
+                    <a href="">Tienda</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/semillas/semillas-sandia">Semillas de Sandia</a>
+                    <a href="">Regiones</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/semillas/semillas-calabaza">Semillas de Calabaza</a>
+                    <a href="">Bayas</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/semillas/semillas-puerro">Semillas de Puerro</a>
+                    <a href="">Trading</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="https://wiki-pokemmo.com/pokedex/">Pokedex</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Crafteo</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">PVP</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-link" style="--i: 1.1s">
-              <p>Herramientas<span>&#9660;</span></p>
+              <p>Pokémon<span>&#9660;</span></p>
               <div class="dropdown">
                 <ul>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/">Todas las Herramientas</a>
+                    <a href="https://wiki-pokemmo.com/pokedex/">Pokédex</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/juego-de-herramientas">Kits de Cultivo</a>
+                    <a href="">Alfas</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/maceteros">Maceteros</a>
+                    <a href="">Manadas</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/regaderas">Regaderas</a>
+                    <a href="">Fenomenos</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/sustrato">Sustratos</a>
+                    <a href="">Hordas</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/tutores">Tutores</a>
+                    <a href="">Legendarios</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/herramientas/nutrientes">Nutrientes</a>
+                    <a href="">Miticos</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Objetos Capturando</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Crianza</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Evolución</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Tipos</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Entrenamiento EV</a>
+                  </li>
+				  <li class="dropdown-link">
+                    <a href="">Hab. Recogida</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-link" style="--i: 1.35s">
-              <p>Guias<span>&#9660;</span></p>
+              <p>Objetos<span>&#9660;</span></p>
               <div class="dropdown">
                 <ul>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/">Todas las Guias</a>
+                    <a href="">Aventura</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-tomate">Como cultivar tomates</a>
+                    <a href="">Vitaminas</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-pimiento">Como cultivar pimientos</a>
+                    <a href="">Bayas</a>
                   </li>
                   <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-calabaza">Como cultivar calabazas</a>
+                    <a href="">Crianza</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Batalla</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Semillas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Caracteristicas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Usables</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Polvo</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Evolución</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Historia</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Cosmeticos</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Aumento</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Poké Ball</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Señuelos</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Miscelania</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">TM</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">HM</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Ocarina</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Medicinas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Puntos RP</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Regiones<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Kanto</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Johto</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Sinnoh</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Hoenn</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Teselia</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Islas Sete</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Localizaciones<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Rutas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Ciudades</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Safari</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Gimnasios</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Pueblos</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Centros Pokemon</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Liga Pokemon</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Tiendas Pokemon</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Frente de Batalla</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Grandes Almacenes</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Puntos de Referencia</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Guarderias</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Npc's<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Rival</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Madre</a>
                   </li>
 				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-fresas">Como cultivar fresas</a>
+					<a href="">Intercambio</a>
+				  </li>
+                  <li class="dropdown-link">
+                    <a href="">Lideres Gimnasio</a>
                   </li>
-				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-sandia">Como cultivar sandias</a>
+                  <li class="dropdown-link">
+                    <a href="">Master Movimientos</a>
                   </li>
-				  <li class="dropdown-link">
-                    <a href="https://semillasde.es/guias/como-cultivar-puerro">Como cultivar puerros</a>
+                  <li class="dropdown-link">
+                    <a href="">Movimientos Maniaco</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Tutores de Movimiento</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Elite</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Campeon</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Crafteo</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Rojo</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Pirata</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Crianza</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Guarderia</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Mecanicas<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Daño</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Prioridad</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Crianza</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Golpe Critico</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Hebilidades</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Bayas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Efectos de Estado</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Tiempo</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Ratio Captura</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">MultiBatalla</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Retroceder</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Shiny</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Bufos</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Debufos</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Limite de Nivel</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Particulas</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Felicidad</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Estado Donador</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Eventos<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Captura Mensual</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Aniversario</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Halloween</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Torneo Mensual</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Año Nuevo Lunar</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Navidad</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Add-ons<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Interfaz</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Sprites</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Sonido</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.35s">
+              <p>Actualizaciones<span>&#9660;</span></p>
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="">Change Log 04/11/23</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Halloween 2023</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Change Log 19/10/23</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">HeartGold 12/08/23</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Change Log 28/04/23</a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="">Año Nuevo Lunar</a>
                   </li>
                 </ul>
               </div>
