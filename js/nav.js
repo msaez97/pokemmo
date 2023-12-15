@@ -51,7 +51,7 @@ function cerrarSubMenu5() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(5)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(5)").addEventListener("click", cerrarSubMenu5);
 }
 
 function cerrarSubMenu6() {
@@ -65,7 +65,7 @@ function cerrarSubMenu6() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(6)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(6)").addEventListener("click", cerrarSubMenu6);
 }
 
 function cerrarSubMenu7() {
@@ -79,7 +79,7 @@ function cerrarSubMenu7() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(7)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(7)").addEventListener("click", cerrarSubMenu7);
 }
 
 function cerrarSubMenu8() {
@@ -93,7 +93,7 @@ function cerrarSubMenu8() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(8)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(8)").addEventListener("click", cerrarSubMenu8);
 }
 
 function cerrarSubMenu9() {
@@ -107,7 +107,7 @@ function cerrarSubMenu9() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(9)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(9)").addEventListener("click", cerrarSubMenu9);
 }
 
 function cerrarSubMenu10() {
@@ -121,7 +121,7 @@ function cerrarSubMenu10() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(10)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(10)").addEventListener("click", cerrarSubMenu10);
 }
 
 function cerrarSubMenu11() {
@@ -135,5 +135,5 @@ function cerrarSubMenu11() {
 }
 
 if (window.screen.width <= 950) {
-	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(11)").addEventListener("click", cerrarSubMenu4);
+	document.querySelector("body > header > div > div.nav-btn > div > ul > li:nth-child(11)").addEventListener("click", cerrarSubMenu11);
 }
