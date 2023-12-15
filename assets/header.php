@@ -5,7 +5,7 @@
       <div class="logo-container">
 		  <a class="logo-flex" href="/">
 			  <img src="https://wiki-pokemmo.com/img/favicon.ico" alt="Logo Wiki PokeMMO" width="32" height="32">
-			  <h3 class="logo">Wiki PokeMMO <span>No Oficial</span></h3>
+			  <h3 class="logo">Wiki PokeMMO <span style="font-size: 1.4rem;">No Oficial</span></h3>
 		  </a>
       </div>
 
