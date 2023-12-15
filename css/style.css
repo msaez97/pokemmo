@@ -603,6 +603,7 @@ a {
 	gap: 1rem;
 	padding: 1rem;
 	text-transform: uppercase;
+	align-items: center;
 }
 .infoPoke a {
 	color: var(--negro);
