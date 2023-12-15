@@ -74,7 +74,7 @@ function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
         <div class="stats"></div>
         `;
     } else {
-        const nombrePokeAnterior = `←${pokemonAnterior.name}`;
+        const nombrePokeAnterior = `${pokemonAnterior.name}`;
         const nombrePokeSiguiente = pokemonSiguiente.name;
 
         nombrePokemon.innerHTML += `
@@ -82,7 +82,7 @@ function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
             <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
             <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
             <div class="infoPoke">
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}">${nombrePokeAnterior}</a>
+                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}">←${nombrePokeAnterior}</a>
                 <p style="color: #78C850;">${nombrePoke}</p>
                 <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">${nombrePokeSiguiente}→</a>
             </div>
