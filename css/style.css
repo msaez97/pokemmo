@@ -586,7 +586,7 @@ a {
 	border: 2px solid var(--negro);
 	border-radius: 1rem;
 }
-.cartaInfo img {
+.imagenPoke {
 	width: 100%;
 	height: auto;
 }
@@ -599,7 +599,7 @@ a {
 }
 .infoPoke {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	gap: 1rem;
 	padding: 1rem;
 	text-transform: uppercase;
@@ -607,4 +607,10 @@ a {
 }
 .infoPoke a {
 	color: var(--negro);
+	display: flex;
+	align-items: center;
+}
+.infoPoke p {
+	display: flex;
+	align-items: center;
 }

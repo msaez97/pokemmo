@@ -44,15 +44,16 @@ function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
     if (pokemonAnterior == "") {
         const nombrePokeAnterior = "";
         const nombrePokeSiguiente = pokemonSiguiente.name;
+        const imagenPokeActual = pokemon.sprites.front_default;
+        const imagenPokeSiguiente = pokemonSiguiente.sprites.front_default;
 
         nombrePokemon.innerHTML += `
         <div class="cartaInfo">
             <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
             <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
             <div class="infoPoke">
-                <p>${nombrePokeAnterior}</p>
-                <p style="color: #78C850;">${nombrePoke}</p>
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">${nombrePokeSiguiente}→</a>
+                <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
+                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">→<img src="${imagenPokeSiguiente}" alt="${nombrePokeSiguiente}" width="32" height="32"></a>
             </div>
         </div>
         <div class="stats"></div>
@@ -60,15 +61,16 @@ function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
     } else if(pokemonSiguiente == "") {
         const nombrePokeAnterior = pokemonAnterior.name;
         const nombrePokeSiguiente = "";
+        const imagenPokeActual = pokemon.sprites.front_default;
+        const imagenPokeAnterior = pokemonAnterior.sprites.front_default;
 
         nombrePokemon.innerHTML += `
         <div class="cartaInfo">
             <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
             <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
             <div class="infoPoke">
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}">←${nombrePokeAnterior}</a>
-                <p style="color: #78C850;">${nombrePoke}</p>
-                <p>${nombrePokeSiguiente}</p>
+                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}"><img src="${imagenPokeAnterior}" alt="${nombrePokeAnterior}" width="32" height="32">←</a>
+                <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
             </div>
         </div>
         <div class="stats"></div>
@@ -76,15 +78,18 @@ function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
     } else {
         const nombrePokeAnterior = `${pokemonAnterior.name}`;
         const nombrePokeSiguiente = pokemonSiguiente.name;
+        const imagenPokeActual = pokemon.sprites.front_default;
+        const imagenPokeAnterior = pokemonAnterior.sprites.front_default;
+        const imagenPokeSiguiente = pokemonSiguiente.sprites.front_default;
 
         nombrePokemon.innerHTML += `
         <div class="cartaInfo">
             <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
             <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
             <div class="infoPoke">
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}">←${nombrePokeAnterior}</a>
-                <p style="color: #78C850;">${nombrePoke}</p>
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">${nombrePokeSiguiente}→</a>
+                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}"><img src="${imagenPokeAnterior}" alt="${nombrePokeAnterior}" width="32" height="32">←</a>
+                <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
+                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">→<img src="${imagenPokeSiguiente}" alt="${nombrePokeSiguiente}" width="32" height="32"></a>
             </div>
         </div>
         <div class="stats"></div>
