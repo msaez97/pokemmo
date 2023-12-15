@@ -4,7 +4,8 @@
       <input type="checkbox" name="check" id="check" aria-label="Menu">
       <div class="logo-container">
 		  <a class="logo-flex" href="/">
-			  <img src="https://wiki-pokemmo.com/img/logo-wiki-pokemmo.webp" alt="Logo Wiki PokeMMO" width="32" height="32">
+			  <img src="https://wiki-pokemmo.com/img/favicon.ico" alt="Logo Wiki PokeMMO" width="32" height="32">
+			  <h3 class="logo">Wiki PokeMMO <span>No Oficial</span></h3>
 		  </a>
       </div>
 

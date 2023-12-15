@@ -98,8 +98,6 @@ section {
 }
 .logo-flex img {
 	object-fit: contain;
-    width: 20rem;
-    height: auto;
 }
 .btn {
   display: inline-block;
@@ -334,7 +332,7 @@ section {
   .nav-btn {
     position: fixed;
     height: calc(100vh - 3rem);
-    top: 6.9rem;
+    top: 5rem;
     left: 0;
     width: 100%;
     background-color: var(--clr-btn);
