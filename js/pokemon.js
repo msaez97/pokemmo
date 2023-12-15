@@ -112,7 +112,7 @@ function crearBarra(valor, nombre) {
     // Crear elemento para el fondo que indica lo que falta
     var fondo = document.createElement("div");
     fondo.className = `barra${nombre}`;
-    fondo.style.width = 500 + "px";
+    fondo.style.width = 100 + "%";
 
     let texto = document.createElement("p");
     texto.className = `texto${nombre}`;

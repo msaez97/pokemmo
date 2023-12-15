@@ -12,6 +12,7 @@ $pokemonName = $_GET["name"];
     <link rel="icon" type="image/vnd.icon" href="../img/favicon.ico">
     <link rel="apple-touch-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GW3K77TW0W"></script>
     <script>
@@ -28,6 +29,7 @@ $pokemonName = $_GET["name"];
     <div class="cartaPokemon"></div>
 
     <script src="../js/pokemon.js"></script>
+    <script src="../js/nav.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4911360042357338"
      crossorigin="anonymous"></script>
 </body>
