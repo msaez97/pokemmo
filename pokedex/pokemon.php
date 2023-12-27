@@ -25,6 +25,8 @@ $pokemonName = $_GET["name"];
 </head>
 <body>
     <?php require '../assets/header.php'; ?>
+    <div class="mensajeCarga" style="display: none; text-align: center;">Cargando Datos Pokemon...</div>
+
 
     <div class="cartaPokemon"></div>
 
