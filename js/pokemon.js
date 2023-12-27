@@ -5,125 +5,232 @@ getPokemon(pokemonId);
 
 async function getPokemon(pokemonId) {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+        // Convertir pokemonId a número para asegurar la correcta evaluación
+        const numericPokemonId = parseInt(pokemonId, 10);
+
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${numericPokemonId}`);
         const pokemon = await response.json();
-        if (pokemonId >= 2 && pokemonId <= 647) {
-            const responseAnterior = await fetch(`https://pokeapi.co/api/v2/pokemon/${Number(pokemonId) - 1}`);
-            const pokemonAnterior = await responseAnterior.json();
-            const responseSiguiente = await fetch(`https://pokeapi.co/api/v2/pokemon/${Number(pokemonId) + 1}`);
-            const pokemonSiguiente = await responseSiguiente.json();
-            cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente);
-        } else if (pokemonId == 648){
-            const responseAnterior = await fetch(`https://pokeapi.co/api/v2/pokemon/${Number(pokemonId) - 1}`);
-            const pokemonAnterior = await responseAnterior.json();
-            cartaPokemon(pokemon, pokemonAnterior, "")
+        
+        let pokemonAnterior = null;
+        let pokemonSiguiente = null;
+
+        if (numericPokemonId >= 2 && numericPokemonId <= 647) {
+            pokemonAnterior = await getPokemonData(numericPokemonId - 1);
+            pokemonSiguiente = await getPokemonData(numericPokemonId + 1);
+        } else if (numericPokemonId == 648) {
+            pokemonAnterior = await getPokemonData(numericPokemonId - 1);
         } else {
-            const responseSiguiente = await fetch(`https://pokeapi.co/api/v2/pokemon/${Number(pokemonId) + 1}`);
-            const pokemonSiguiente = await responseSiguiente.json();
-            cartaPokemon(pokemon, "", pokemonSiguiente)
+            pokemonSiguiente = await getPokemonData(numericPokemonId + 1);
         }
-        
-        
+
+        cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente);
+
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
-function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
+async function getPokemonData(pokemonId) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+    return response.json();
+}
 
+function traducirTipo(tipo) {
+    const traducciones = {
+        "grass": "Planta",
+        "poison": "Veneno",
+        "fire": "Fuego",
+        "flying": "Volador",
+        "water": "Agua",
+        "bug": "Bicho",
+        "normal": "Normal",
+        "electric": "Eléctrico",
+        "ground": "Tierra",
+        "fairy": "Hada",
+        "fighting": "Lucha",
+        "psychic": "Psíquico",
+        "rock": "Roca",
+        "steel": "Acero",
+        "ice": "Hielo",
+        "ghost": "Fantasma",
+        "dragon": "Dragón",
+        "dark": "Siniestro"
+    };
+
+    return traducciones[tipo] || tipo;
+}
+
+async function getPokemonAbilities(pokemonId) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+    const data = await response.json();
+    const abilities = data.abilities;
+
+    const abilitiesData = await Promise.all(abilities.map(async (ability) => {
+        const abilityResponse = await fetch(ability.ability.url);
+        const abilityData = await abilityResponse.json();
+
+        const translatedName = abilityData.names.find(name => name.language.name === 'es').name;
+        const isHidden = ability.is_hidden;
+
+        return { name: translatedName, isHidden: isHidden };
+    }));
+
+    return abilitiesData;
+}
+
+async function getPokemonEvolutions(pokemonId) {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`);
+        const data = await response.json();
+
+        const evolutionChainUrl = data.evolution_chain.url;
+        const evolutionChainResponse = await fetch(evolutionChainUrl);
+        const evolutionChainData = await evolutionChainResponse.json();
+
+        const evolutions = parseEvolutionChain(evolutionChainData.chain);
+
+        return evolutions;
+    } catch (error) {
+        console.error(error);
+        return {};
+    }
+}
+
+async function parseEvolutionChain(chain) {
+    const evolution = {
+        species: chain.species.name,
+        isTriggeredByItem: chain.evolution_details.some(detail => detail.item),
+        triggerItem: chain.evolution_details.find(detail => detail.item)?.item?.name,
+    };
+
+    // Obtener el nivel de evolución si existe
+    const levelUpDetails = chain.evolution_details.find(detail => detail.trigger.name === "level-up");
+    if (levelUpDetails) {
+        evolution.minLevel = levelUpDetails.min_level;
+    }
+
+    try {
+        const speciesResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${evolution.species}`);
+        const speciesData = await speciesResponse.json();
+        evolution.spriteUrl = speciesData.sprites.front_default;
+    } catch (error) {
+        console.error(`Error al obtener la URL de la imagen para ${evolution.species}: ${error}`);
+    }
+
+    if (chain.evolves_to && chain.evolves_to.length > 0) {
+        evolution.evolvesTo = await Promise.all(
+            chain.evolves_to.map(async subChain => parseEvolutionChain(subChain))
+        );
+    }
+
+    return evolution;
+}
+
+async function cartaPokemon(pokemon, pokemonAnterior, pokemonSiguiente) {
     const nombrePokemon = document.querySelector(".cartaPokemon");
     const nombrePoke = pokemon.name;
-    const hp = pokemon.stats[0].base_stat;
-    const atq = pokemon.stats[1].base_stat;
-    const def = pokemon.stats[2].base_stat;
-    const atq_esp = pokemon.stats[3].base_stat;
-    const def_esp = pokemon.stats[4].base_stat;
-    const vel = pokemon.stats[5].base_stat;
-    const imagen = pokemon.sprites.other["official-artwork"].front_default;
-    
-    if (pokemonAnterior == "") {
-        const nombrePokeAnterior = "";
-        const nombrePokeSiguiente = pokemonSiguiente.name;
-        const imagenPokeActual = pokemon.sprites.front_default;
-        const imagenPokeSiguiente = pokemonSiguiente.sprites.front_default;
+    const tipos = pokemon.types.map(type => `<p class="${type.type.name}">${traducirTipo(type.type.name)}</p>`).join('');
+    const imagen = pokemon.sprites.other["official-artwork"].front_default;;
 
-        nombrePokemon.innerHTML += `
+    const imagenPokeActual = pokemon.sprites.front_default;
+    const imagenPokeAnterior = pokemonAnterior ? pokemonAnterior.sprites.front_default : "";
+    const imagenPokeSiguiente = pokemonSiguiente ? pokemonSiguiente.sprites.front_default : "";
+
+    const habilidadesData = await getPokemonAbilities(pokemon.id);
+    const habilidadesHTML = habilidadesData.map(ability => {
+        const isHiddenText = ability.isHidden ? "Habilidad Oculta: " : "Habilidad: ";
+        return `<p class="PokeHabilidadesCarta">${isHiddenText}<a href="">${ability.name}</a></p>`;
+    }).join('');
+
+    const evoluciones = await getPokemonEvolutions(pokemon.id);
+    const evolucionesHTML = renderEvolutions(evoluciones);
+
+    const cartaInfo = `
         <div class="cartaInfo">
             <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
             <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
             <div class="infoPoke">
+                ${pokemonAnterior ? `<a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${pokemonAnterior.id}&name=${pokemonAnterior.name}"><img src="${imagenPokeAnterior}" alt="${pokemonAnterior.name}" width="32" height="32">←</a>` : ''}
                 <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">→<img src="${imagenPokeSiguiente}" alt="${nombrePokeSiguiente}" width="32" height="32"></a>
+                ${pokemonSiguiente ? `<a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${pokemonSiguiente.id}&name=${pokemonSiguiente.name}">→<img src="${imagenPokeSiguiente}" alt="${pokemonSiguiente.name}" width="32" height="32"></a>` : ''}
+            </div>
+            <div class="cartaPokeTipos">
+                ${tipos}
+            </div>
+            <div class="cartaPokeHabilidades">
+                ${habilidadesHTML}
+            </div>
+            <div class="cartaPokeEvoluciones">
+                <p style="padding: 0 .75rem;">Evoluciones</p>
+                ${evolucionesHTML}
             </div>
         </div>
         <div class="stats"></div>
-        `;
-    } else if(pokemonSiguiente == "") {
-        const nombrePokeAnterior = pokemonAnterior.name;
-        const nombrePokeSiguiente = "";
-        const imagenPokeActual = pokemon.sprites.front_default;
-        const imagenPokeAnterior = pokemonAnterior.sprites.front_default;
+    `;
 
-        nombrePokemon.innerHTML += `
-        <div class="cartaInfo">
-            <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
-            <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
-            <div class="infoPoke">
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}"><img src="${imagenPokeAnterior}" alt="${nombrePokeAnterior}" width="32" height="32">←</a>
-                <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
-            </div>
-        </div>
-        <div class="stats"></div>
-        `;
-    } else {
-        const nombrePokeAnterior = `${pokemonAnterior.name}`;
-        const nombrePokeSiguiente = pokemonSiguiente.name;
-        const imagenPokeActual = pokemon.sprites.front_default;
-        const imagenPokeAnterior = pokemonAnterior.sprites.front_default;
-        const imagenPokeSiguiente = pokemonSiguiente.sprites.front_default;
+    nombrePokemon.innerHTML += cartaInfo;
 
-        nombrePokemon.innerHTML += `
-        <div class="cartaInfo">
-            <img class="imagenPoke" src="${imagen}" alt="imagen ${nombrePoke}" width="150" height="150">
-            <button id="cambiarShiny" onclick="cambiarShiny()">Ver Shiny</button>
-            <div class="infoPoke">
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) - 1}&name=${nombrePokeAnterior}"><img src="${imagenPokeAnterior}" alt="${nombrePokeAnterior}" width="32" height="32">←</a>
-                <p style="color: #78C850;"><img src="${imagenPokeActual}" alt="${nombrePoke}" width="32" height="32">${nombrePoke}</p>
-                <a href="http://wiki-pokemmo.com/pokedex/pokemon.php?id=${Number(pokemonId) + 1}&name=${nombrePokeSiguiente}">→<img src="${imagenPokeSiguiente}" alt="${nombrePokeSiguiente}" width="32" height="32"></a>
-            </div>
-        </div>
-        <div class="stats"></div>
-        `;
-    }
+    crearBarra(pokemon.stats[0].base_stat, "HP");
+    crearBarra(pokemon.stats[1].base_stat, "ATQ");
+    crearBarra(pokemon.stats[2].base_stat, "DEF");
+    crearBarra(pokemon.stats[3].base_stat, "ATQESP");
+    crearBarra(pokemon.stats[4].base_stat, "DEFESP");
+    crearBarra(pokemon.stats[5].base_stat, "VEL");
 
-    crearBarra(hp, "HP");
-    crearBarra(atq, "ATQ");
-    crearBarra(def, "DEF");
-    crearBarra(atq_esp, "ATQESP");
-    crearBarra(def_esp, "DEFESP");
-    crearBarra(vel, "VEL");
-
+    quitarHada(nombrePoke, ["mr-mime", "gardevoir", "marill", "azumarill", "wigglytuff", "jigglypuff", "igglybuff", "ralts", "kirlia", "mawile", "mime-jr", "cottonee", "whimsicott", "azurill"]);
 }
 
+function renderEvolutions(evolution) {
+    if (!evolution.species) {
+        return "<p>No hay información de evolución disponible.</p>";
+    }
+
+    let html = "";
+
+    function renderNode(node) {
+        html += `<div class="evolutionInfo">`;
+        
+        html += `<p>`;
+        if (node.minLevel) {
+            html += `Nvl: ${node.minLevel}`;
+        }
+        if (node.isTriggeredByItem) {
+            html += `Itm: ${node.triggerItem}`;
+        }
+        html += `</p>`;
+
+        // Agregar la imagen del Pokémon si está disponible
+        if (node.spriteUrl) {
+            html += `<img src="${node.spriteUrl}" alt="${node.species}" class="evolutionSprite">`;
+        }
+
+        html += `</div>`;
+
+        if (node.evolvesTo && node.evolvesTo.length > 0) {
+            node.evolvesTo.forEach(subNode => {
+                renderNode(subNode);
+            });
+        }
+    }
+
+    renderNode(evolution);
+
+    return html;
+}
+
+
 function crearBarra(valor, nombre) {
-    // Crear elemento div para representar la barra
-    var barra = document.createElement("div");
-    // Establecer la clase para aplicar estilos
+    const barra = document.createElement("div");
     barra.className = `rellena_barra${nombre}`;
-
-    // Calcular el ancho de la barra en función del valor pasado
-    var ancho = Math.min(valor, 200);
-
-    // Crear elemento para el fondo que indica lo que falta
-    var fondo = document.createElement("div");
+    const fondo = document.createElement("div");
     fondo.className = `barra${nombre}`;
-    fondo.style.width = 100 + "%";
+    fondo.style.width = "100%";
 
-    let texto = document.createElement("p");
+    const texto = document.createElement("p");
     texto.className = `texto${nombre}`;
     texto.innerHTML = `${nombre}`;
 
-    let valorTexto = document.createElement("p");
+    const valorTexto = document.createElement("p");
     valorTexto.className = `textoStat`;
     valorTexto.innerHTML = `${valor}`;
 
@@ -131,12 +238,11 @@ function crearBarra(valor, nombre) {
     fondo.appendChild(valorTexto);
     fondo.appendChild(barra);
 
-    // Establecer el ancho de la barra
-    barra.style.width = ancho + "px";
+    barra.style.width = Math.min(valor, 200) + "px";
 
-    // Añadir la barra al contenedor
     document.querySelector(".stats").appendChild(fondo);
-  }
+}
+
 function cambiarShiny() {
     const imagenPoke = document.querySelector(".imagenPoke");
     const botonShiny = document.querySelector("#cambiarShiny");
@@ -145,21 +251,23 @@ function cambiarShiny() {
     const pokemonId = id.get("id");
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-    .then(response => response.json())
-    .then(data => {
+        .then(response => response.json())
+        .then(data => {
+            const shinyImage = data.sprites.other["official-artwork"].front_shiny;
+            const defaultImage = data.sprites.other["official-artwork"].front_default;
 
-        if (imagenPoke.src != data.sprites.other["official-artwork"].front_shiny) {
+            if (imagenPoke.src !== shinyImage) {
+                imagenPoke.src = shinyImage;
+                botonShiny.innerHTML = "Ver Normal";
+            } else {
+                imagenPoke.src = defaultImage;
+                botonShiny.innerHTML = "Ver Shiny";
+            }
+        });
+}
 
-            imagenPoke.src = data.sprites.other["official-artwork"].front_shiny;
-            botonShiny.innerHTML = "Ver Normal";
-
-        } else {
-
-            imagenPoke.src = data.sprites.other["official-artwork"].front_default;
-            botonShiny.innerHTML = "Ver Shiny";
-
-        }
-
-    });
-
+function quitarHada(nombrePoke, tiposHada) {
+    if (tiposHada.includes(nombrePoke)) {
+        document.querySelector(".Hada").remove();
+    }
 }
